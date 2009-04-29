@@ -1,0 +1,41 @@
+<!DOCTYPE BENCHMARK >
+<BENCHMARK name="vertextest">
+	<TECHNIQUE duration="5">
+		<CONTENT patch="Content_VertexTester">
+			<INPUT name="x Resolution" value="10"/>
+			<INPUT name="y Resolution" value="100"/>
+			<INPUT name="Instance Count" value="10"/>
+			<INPUT name="Instanced" value="1"/>
+		</CONTENT>
+		<RENDERER>
+			<SETTING name="Dimensions" value="1024 x 768"/>
+			<SETTING name="DepthBuffer" value="D24"/>
+			<SETTING name="Antialiasing" value="8"/>
+			<SETTING name="Additional Renderpass" value="0"/>
+			<SETTING name="Fullscreen" value="1"/>
+		</RENDERER>
+	</TECHNIQUE>
+	<TECHNIQUE duration="5">
+		<CONTENT patch="Content_PixelTester">
+		</CONTENT>
+		<RENDERER>
+			<SETTING name="Dimensions" value="1024 x 768"/>
+			<SETTING name="DepthBuffer" value="D24"/>
+			<SETTING name="Antialiasing" value="8"/>
+			<SETTING name="Additional Renderpass" value="1"/>
+			<SETTING name="Fullscreen" value="1"/>
+		</RENDERER>
+	</TECHNIQUE>
+	<TECHNIQUE duration="5">
+		<CONTENT patch="Content_PixelTester_CubeTexture">
+		</CONTENT>
+		<RENDERER>
+			<SETTING name="Dimensions" value="1024 x 768"/>
+			<SETTING name="DepthBuffer" value="D24"/>
+			<SETTING name="Antialiasing" value="8"/>
+			<SETTING name="Additional Renderpass" value="1"/>
+			<SETTING name="Fullscreen" value="1"/>
+		</RENDERER>
+	</TECHNIQUE>
+
+</BENCHMARK>

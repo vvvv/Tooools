@@ -1,0 +1,15 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv40beta21.dtd" >
+   <PATCH nodename="Y:\vvvv_trunk\tools\benchmarker\Content_VertexTester.v4p">
+   <BOUNDS type="Window" left="6105" top="450" width="9315" height="12015">
+   </BOUNDS>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="1">
+   <BOUNDS type="Node" left="1230" top="4470" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1230" top="4470" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Window" left="4995" top="6510" width="215" height="160">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
+   </PIN>
+   </NODE>
+   </PATCH>
