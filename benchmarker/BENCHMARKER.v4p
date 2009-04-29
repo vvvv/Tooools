@@ -1,8 +1,8 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv40beta21.dtd" >
-   <PATCH nodename="D:\open\benchmarker\BENCHMARKER.v4p" locked="1">
+   <PATCH nodename="Y:\vvvv_trunk\tools\benchmarker\BENCHMARKER.v4p" locked="1">
    <BOUNDS height="9885" left="6105" top="450" type="Window" width="12705">
    </BOUNDS>
-   <NODE componentmode="Hidden" id="10" nodename="Renderer.v4p" path="D:\open\benchmarker\">
+   <NODE componentmode="Hidden" id="10" nodename="Renderer.v4p" path="Y:\vvvv_trunk\tools\benchmarker\">
    <BOUNDS height="100" left="3480" top="8100" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="3600" left="3480" top="8100" type="Box" width="4800">
@@ -22,12 +22,12 @@
    <PIN pinname="Benchmark Running" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="9" nodename="Logger.v4p" path="D:\open\benchmarker\">
+   <NODE componentmode="Hidden" id="9" nodename="Logger.v4p" path="Y:\vvvv_trunk\tools\benchmarker\">
    <BOUNDS height="100" left="5430" top="5085" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="3600" left="5430" top="5085" type="Box" width="4800">
    </BOUNDS>
-   <BOUNDS height="16965" left="6105" top="450" type="Window" width="13785">
+   <BOUNDS height="16965" left="11220" top="450" type="Window" width="13785">
    </BOUNDS>
    <PIN pinname="Benchmark Description" visible="1">
    </PIN>
@@ -44,12 +44,12 @@
    <PIN pinname="Benchmark Description File" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="8" nodename="Configurator.v4p" path="D:\open\benchmarker\">
+   <NODE componentmode="Hidden" id="8" nodename="Configurator.v4p" path="Y:\vvvv_trunk\tools\benchmarker\">
    <BOUNDS height="100" left="4290" top="3435" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="3600" left="4290" top="3435" type="Box" width="4800">
    </BOUNDS>
-   <BOUNDS height="16965" left="6105" top="450" type="Window" width="13785">
+   <BOUNDS height="16965" left="12345" top="495" type="Window" width="13785">
    </BOUNDS>
    <PIN pinname="Content Settings" visible="1">
    </PIN>
@@ -141,7 +141,7 @@
    </BOUNDS>
    <BOUNDS height="160" left="12645" top="1425" type="Window" width="215">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="D:\open\bm_sample.xml">
+   <PIN pinname="Input String" slicecount="1" values="bm_sample.xml">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -190,7 +190,7 @@
    <PIN pinname="Size" slicecount="1" values="11">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="0" nodename="Content_Dummy.v4p" path="D:\open\benchmarker\">
+   <NODE componentmode="Hidden" id="0" nodename="Content_Dummy.v4p" path="Y:\vvvv_trunk\tools\benchmarker\">
    <BOUNDS height="0" left="1935" top="5100" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="3600" left="1935" top="5100" type="Box" width="4800">
