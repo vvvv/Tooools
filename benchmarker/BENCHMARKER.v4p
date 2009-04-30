@@ -1,13 +1,13 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv40beta21.dtd" >
-   <PATCH nodename="Y:\vvvv_trunk\tools\benchmarker\BENCHMARKER.v4p" locked="1">
-   <BOUNDS height="9885" left="6105" top="450" type="Window" width="12705">
+   <PATCH nodename="C:\Dokumente und Einstellungen\greg\Desktop\Root\Dev\benchmark\BENCHMARKER.v4p" locked="0">
+   <BOUNDS height="9885" left="6465" top="1920" type="Window" width="12705">
    </BOUNDS>
-   <NODE componentmode="Hidden" id="10" nodename="Renderer.v4p" path="Y:\vvvv_trunk\tools\benchmarker\">
+   <NODE componentmode="Hidden" id="10" nodename="Renderer.v4p" path="C:\Dokumente und Einstellungen\greg\Desktop\Root\Dev\benchmark\">
    <BOUNDS height="100" left="3480" top="8100" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="3600" left="3480" top="8100" type="Box" width="4800">
    </BOUNDS>
-   <BOUNDS height="16965" left="6105" top="450" type="Window" width="13785">
+   <BOUNDS height="16965" left="15720" top="15" type="Window" width="13785">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -17,12 +17,14 @@
    </PIN>
    <PIN pinname="Start" visible="1">
    </PIN>
-   <PIN pinname="Technique Running" slicecount="1" visible="1" values="0">
+   <PIN pinname="Technique Running" visible="1">
    </PIN>
    <PIN pinname="Benchmark Running" visible="1">
    </PIN>
+   <PIN pinname="Duration" visible="1">
+   </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="9" nodename="Logger.v4p" path="Y:\vvvv_trunk\tools\benchmarker\">
+   <NODE componentmode="Hidden" id="9" nodename="Logger.v4p" path="C:\Dokumente und Einstellungen\greg\Desktop\Root\Dev\benchmark\">
    <BOUNDS height="100" left="5430" top="5085" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="3600" left="5430" top="5085" type="Box" width="4800">
@@ -44,7 +46,7 @@
    <PIN pinname="Benchmark Description File" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="8" nodename="Configurator.v4p" path="Y:\vvvv_trunk\tools\benchmarker\">
+   <NODE componentmode="Hidden" id="8" nodename="Configurator.v4p" path="C:\Dokumente und Einstellungen\greg\Desktop\Root\Dev\benchmark\">
    <BOUNDS height="100" left="4290" top="3435" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="3600" left="4290" top="3435" type="Box" width="4800">
@@ -65,7 +67,7 @@
    </PIN>
    <PIN pinname="Current Technique" visible="1">
    </PIN>
-   <PIN pinname="Technique Description" visible="1">
+   <PIN pinname="Technique Description" slicecount="1" visible="1" values="|&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-16&quot;?&gt;&lt;BENCHMARK&gt;&lt;TECHNIQUE duration=&quot;5&quot;&gt;&cr;&lf;&lt;CONTENT patch=&quot;Content_VertexTester&quot;&gt;&cr;&lf;&lt;INPUT name=&quot;x Resolution&quot; value=&quot;10&quot; /&gt;&cr;&lf;&lt;INPUT name=&quot;y Resolution&quot; value=&quot;100&quot; /&gt;&cr;&lf;&lt;INPUT name=&quot;Instance Count&quot; value=&quot;10&quot; /&gt;&cr;&lf;&lt;INPUT name=&quot;Instanced&quot; value=&quot;1&quot; /&gt;&cr;&lf;&lt;/CONTENT&gt;&cr;&lf;&lt;RENDERER&gt;&cr;&lf;&lt;SETTING name=&quot;Dimensions&quot; value=&quot;1024 x 768&quot; /&gt;&cr;&lf;&lt;SETTING name=&quot;DepthBuffer&quot; value=&quot;D24&quot; /&gt;&cr;&lf;&lt;SETTING name=&quot;Antialiasing&quot; value=&quot;8&quot; /&gt;&cr;&lf;&lt;SETTING name=&quot;Additional Renderpass&quot; value=&quot;0&quot; /&gt;&cr;&lf;&lt;SETTING name=&quot;Fullscreen&quot; value=&quot;1&quot; /&gt;&cr;&lf;&lt;/RENDERER&gt;&cr;&lf;&lt;/TECHNIQUE&gt;&lt;/BENCHMARK&gt;|">
    </PIN>
    <PIN pinname="Benchmark Description" visible="1">
    </PIN>
@@ -74,6 +76,8 @@
    <PIN pinname="Content ID" visible="1">
    </PIN>
    <PIN pinname="Benchmark Running" visible="1">
+   </PIN>
+   <PIN pinname="Duration" visible="1">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="7" nodename="IOBox (String)">
@@ -190,7 +194,11 @@
    <PIN pinname="Size" slicecount="1" values="11">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="0" nodename="Content_Dummy.v4p" path="Y:\vvvv_trunk\tools\benchmarker\">
+   <LINK dstnodeid="10" dstpinname="Technique Running" srcnodeid="8" srcpinname="Technique Running">
+   </LINK>
+   <LINK dstnodeid="10" dstpinname="Duration" srcnodeid="8" srcpinname="Duration">
+   </LINK>
+   <NODE componentmode="Hidden" id="0" nodename="Content_Dummy.v4p" path="C:\Dokumente und Einstellungen\greg\Desktop\Root\Dev\benchmark\">
    <BOUNDS height="0" left="1935" top="5100" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="3600" left="1935" top="5100" type="Box" width="4800">
