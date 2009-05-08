@@ -1,7 +1,7 @@
 <!DOCTYPE BENCHMARK >
 <BENCHMARK name="vertextest">
 	<TECHNIQUE duration="5">
-		<CONTENT patch="Content_VertexTester">
+		<CONTENT patch="Tester_Vertex">
 			<INPUT name="x Resolution" value="10"/>
 			<INPUT name="y Resolution" value="100"/>
 			<INPUT name="Instance Count" value="10"/>
@@ -16,7 +16,7 @@
 		</RENDERER>
 	</TECHNIQUE>
 	<TECHNIQUE duration="5">
-		<CONTENT patch="Content_PixelTester">
+		<CONTENT patch="Tester_Pixel">
 		</CONTENT>
 		<RENDERER>
 			<SETTING name="Dimensions" value="1024 x 768"/>
@@ -27,7 +27,7 @@
 		</RENDERER>
 	</TECHNIQUE>
 	<TECHNIQUE duration="5">
-		<CONTENT patch="Content_PixelTester_CubeTexture">
+		<CONTENT patch="Tester_Pixel_CubeTexture">
 		</CONTENT>
 		<RENDERER>
 			<SETTING name="Dimensions" value="1024 x 768"/>

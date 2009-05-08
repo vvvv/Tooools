@@ -1,8 +1,8 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv40beta21.dtd" >
-   <PATCH nodename="C:\Dokumente und Einstellungen\greg\Desktop\Root\Dev\benchmark\BENCHMARKER.v4p" locked="0">
-   <BOUNDS height="9885" left="6465" top="1920" type="Window" width="12705">
+   <PATCH nodename="Y:\vvvv_trunk\tools\benchmarker\BENCHMARKER.v4p" locked="0">
+   <BOUNDS height="9885" left="6105" top="450" type="Window" width="12705">
    </BOUNDS>
-   <NODE componentmode="Hidden" id="10" nodename="Renderer.v4p" path="C:\Dokumente und Einstellungen\greg\Desktop\Root\Dev\benchmark\">
+   <NODE componentmode="Hidden" id="10" nodename="Renderer.v4p" path="Y:\vvvv_trunk\tools\benchmarker\">
    <BOUNDS height="100" left="3480" top="8100" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="3600" left="3480" top="8100" type="Box" width="4800">
@@ -24,7 +24,7 @@
    <PIN pinname="Duration" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="9" nodename="Logger.v4p" path="C:\Dokumente und Einstellungen\greg\Desktop\Root\Dev\benchmark\">
+   <NODE componentmode="Hidden" id="9" nodename="Logger.v4p" path="Y:\vvvv_trunk\tools\benchmarker\">
    <BOUNDS height="100" left="5430" top="5085" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="3600" left="5430" top="5085" type="Box" width="4800">
@@ -46,7 +46,7 @@
    <PIN pinname="Benchmark Description File" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="8" nodename="Configurator.v4p" path="C:\Dokumente und Einstellungen\greg\Desktop\Root\Dev\benchmark\">
+   <NODE componentmode="Hidden" id="8" nodename="Configurator.v4p" path="Y:\vvvv_trunk\tools\benchmarker\">
    <BOUNDS height="100" left="4290" top="3435" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="3600" left="4290" top="3435" type="Box" width="4800">
@@ -198,7 +198,7 @@
    </LINK>
    <LINK dstnodeid="10" dstpinname="Duration" srcnodeid="8" srcpinname="Duration">
    </LINK>
-   <NODE componentmode="Hidden" id="0" nodename="Content_Dummy.v4p" path="C:\Dokumente und Einstellungen\greg\Desktop\Root\Dev\benchmark\">
+   <NODE componentmode="Hidden" id="0" nodename="testers\Tester_Vertex.v4p" path="Y:\vvvv_trunk\tools\benchmarker\testers\">
    <BOUNDS height="0" left="1935" top="5100" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="3600" left="1935" top="5100" type="Box" width="4800">
@@ -218,8 +218,8 @@
    <LINKPOINT x="7020" y="2490">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="10" dstpinname="Layer" srcnodeid="0" srcpinname="Layer">
-   </LINK>
    <LINK dstnodeid="0" dstpinname="Settings" srcnodeid="8" srcpinname="Technique Description">
+   </LINK>
+   <LINK dstnodeid="10" dstpinname="Layer" srcnodeid="0" srcpinname="Layer">
    </LINK>
    </PATCH>

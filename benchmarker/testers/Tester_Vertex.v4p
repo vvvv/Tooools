@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv40beta21.dtd" >
-   <PATCH nodename="D:\open\benchmarker\contents\Content_VertexTester.v4p">
+   <PATCH nodename="Y:\vvvv_trunk\tools\benchmarker\testers\Tester_Vertex.v4p">
    <BOUNDS height="6000" left="8550" top="5010" type="Window" width="9000">
    </BOUNDS>
    <NODE componentmode="InABox" id="39" nodename="IOBox (Node)">
@@ -514,7 +514,7 @@
    <PIN pinname="Reload" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="6" nodename="InstanceMesh.v4p" path="D:\open\benchmarker\contents\">
+   <NODE componentmode="Hidden" id="6" nodename="InstanceMesh.v4p" path="Y:\vvvv_trunk\tools\benchmarker\testers\">
    <BOUNDS height="0" left="8565" top="7380" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="3600" left="8565" top="7380" type="Box" width="4800">
@@ -532,7 +532,7 @@
    </LINK>
    <LINK dstnodeid="8" dstpinname="Mesh" srcnodeid="6" srcpinname="Mesh Out">
    </LINK>
-   <NODE componentmode="Hidden" id="5" nodename="XMLParser_Content.v4p" path="D:\open\benchmarker\contents\">
+   <NODE componentmode="Hidden" id="5" nodename="XMLParser_Content.v4p" path="Y:\vvvv_trunk\tools\benchmarker\testers\">
    <BOUNDS height="0" left="2520" top="1455" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="3600" left="2520" top="1455" type="Box" width="4800">
