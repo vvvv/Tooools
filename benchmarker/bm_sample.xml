@@ -1,41 +1,37 @@
 <!DOCTYPE BENCHMARK >
 <BENCHMARK name="vertextest">
+	<RENDERER>
+		<SETTING name="Dimensions" value="1024 x 768"/>
+		<SETTING name="DepthBuffer" value="D24X8"/>
+		<SETTING name="Antialiasing" value="8"/>
+		<SETTING name="Additional Renderpass" value="0"/>
+		<SETTING name="Fullscreen" value="1"/>
+	</RENDERER>
 	<TECHNIQUE duration="5">
-		<CONTENT patch="Tester_Vertex">
-			<INPUT name="x Resolution" value="10"/>
-			<INPUT name="y Resolution" value="100"/>
-			<INPUT name="Instance Count" value="10"/>
+		<DESCRIPTION>a simple vertexshader-only test. drawing each instance with its own drawcall.</DESCRIPTION>
+		<TEST patch="Tester_SimpleVertex">
+			<INPUT name="x Resolution" value="20"/>
+			<INPUT name="y Resolution" value="20"/>
+			<INPUT name="Instance Count" value="50"/>
+			<INPUT name="Instanced" value="0"/>
+		</TEST>
+	</TECHNIQUE>
+	<TECHNIQUE duration="5">
+		<DESCRIPTION>a simple vertexshader-only test. drawing all 50 instances with one drawcall. using shader-instancing.</DESCRIPTION>
+		<TEST patch="Tester_SimpleVertex">
+			<INPUT name="x Resolution" value="20"/>
+			<INPUT name="y Resolution" value="20"/>
+			<INPUT name="Instance Count" value="50"/>
 			<INPUT name="Instanced" value="1"/>
-		</CONTENT>
-		<RENDERER>
-			<SETTING name="Dimensions" value="1024 x 768"/>
-			<SETTING name="DepthBuffer" value="D16"/>
-			<SETTING name="Antialiasing" value="8"/>
-			<SETTING name="Additional Renderpass" value="0"/>
-			<SETTING name="Fullscreen" value="1"/>
-		</RENDERER>
+		</TEST>
 	</TECHNIQUE>
 	<TECHNIQUE duration="5">
-		<CONTENT patch="Tester_Pixel">
-		</CONTENT>
-		<RENDERER>
-			<SETTING name="Dimensions" value="1024 x 768"/>
-			<SETTING name="DepthBuffer" value="D16"/>
-			<SETTING name="Antialiasing" value="8"/>
-			<SETTING name="Additional Renderpass" value="1"/>
-			<SETTING name="Fullscreen" value="1"/>
-		</RENDERER>
+		<TEST patch="Tester_Pixel">
+		</TEST>
 	</TECHNIQUE>
 	<TECHNIQUE duration="5">
-		<CONTENT patch="Tester_Pixel_CubeTexture">
-		</CONTENT>
-		<RENDERER>
-			<SETTING name="Dimensions" value="1024 x 768"/>
-			<SETTING name="DepthBuffer" value="D16"/>
-			<SETTING name="Antialiasing" value="8"/>
-			<SETTING name="Additional Renderpass" value="1"/>
-			<SETTING name="Fullscreen" value="1"/>
-		</RENDERER>
+		<TEST patch="Tester_Pixel_CubeTexture">
+		</TEST>
 	</TECHNIQUE>
 
 </BENCHMARK>

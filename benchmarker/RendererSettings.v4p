@@ -1,0 +1,145 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv40beta21.dtd" >
+   <PATCH nodename="Y:\vvvv_trunk\tools\benchmarker\RendererSettings.v4p">
+   <BOUNDS type="Window" left="4380" top="7185" width="8640" height="9420">
+   </BOUNDS>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="12">
+   <BOUNDS type="Node" left="1050" top="3810" width="4065" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1050" top="3810" width="3705" height="285">
+   </BOUNDS>
+   <BOUNDS type="Window" left="0" top="0" width="215" height="160">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|&tab;&lt;SETTING name=&quot;XXXX&quot; value=&quot;YYYY&quot;/&gt;|">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="13" nodename="Substitute (String)">
+   <BOUNDS height="270" left="1455" top="4680" type="Node" width="840">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="From" visible="1" slicecount="1" values="XXXX">
+   </PIN>
+   <PIN pinname="To" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="Select (String)" componentmode="Hidden" id="15">
+   <BOUNDS type="Node" left="1455" top="4305" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Text">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Select" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Output String" dstnodeid="15" dstpinname="Input">
+   </LINK>
+   <NODE nodename="Count (String)" componentmode="Hidden" id="16">
+   <BOUNDS type="Node" left="2010" top="3390" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Count" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="16" srcpinname="Count" dstnodeid="15" dstpinname="Select">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Output" dstnodeid="13" dstpinname="Input">
+   </LINK>
+   <NODE componentmode="Hidden" id="17" nodename="Substitute (String)">
+   <BOUNDS height="270" left="1455" top="5145" type="Node" width="840">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="From" slicecount="1" visible="1" values="YYYY">
+   </PIN>
+   <PIN pinname="To" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="17" dstpinname="Input">
+   </LINK>
+   <NODE nodename="Cons (String)" componentmode="Hidden" id="18">
+   <BOUNDS type="Node" left="1200" top="5580" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" slicecount="1" values="&lt;RENDERER&gt;">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 3" slicecount="1" values="&lt;/RENDERER&gt;">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="17" srcpinname="Output" dstnodeid="18" dstpinname="Input 2">
+   </LINK>
+   <NODE nodename="Add (String Spectral)" componentmode="Hidden" id="19">
+   <BOUNDS type="Node" left="1200" top="6060" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse String" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="CarriageReturnLineFeed">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="18" srcpinname="Output" dstnodeid="19" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="21">
+   <BOUNDS type="Node" left="705" top="6615" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="705" top="6615" width="6645" height="1575">
+   </BOUNDS>
+   <BOUNDS type="Window" left="10665" top="14940" width="215" height="160">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Technique Settings|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="19" srcpinname="Output" dstnodeid="21" dstpinname="Input String">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="23">
+   <BOUNDS type="Node" left="3780" top="1440" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3780" top="1440" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Window" left="15225" top="11760" width="215" height="160">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Renderer Settings|">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="24" nodename="IOBox (String)">
+   <BOUNDS height="0" left="5220" top="1440" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="5220" top="1440" type="Box" width="795">
+   </BOUNDS>
+   <BOUNDS height="160" left="15525" top="12060" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Renderer Settings Values|">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="23" srcpinname="Output String" dstnodeid="16" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="24" srcpinname="Output String" dstnodeid="17" dstpinname="To">
+   </LINK>
+   <LINK srcnodeid="23" srcpinname="Output String" dstnodeid="13" dstpinname="To">
+   </LINK>
+   </PATCH>

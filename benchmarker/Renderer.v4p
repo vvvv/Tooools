@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv40beta21.dtd" >
-   <PATCH nodename="C:\Dokumente und Einstellungen\greg\Desktop\Root\Dev\benchmark\Renderer.v4p">
-   <BOUNDS height="16965" left="15720" top="15" type="Window" width="13785">
+   <PATCH nodename="Y:\vvvv_trunk\tools\benchmarker\Renderer.v4p">
+   <BOUNDS height="11985" left="13530" top="4500" type="Window" width="13905">
    </BOUNDS>
    <NODE componentmode="InABox" id="59" nodename="IOBox (Node)">
    <BOUNDS height="0" left="1680" top="645" type="Node" width="0">
@@ -33,13 +33,13 @@
    </PIN>
    <PIN pinname="ID" pintype="Output" visible="1">
    </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="8">
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
    </PIN>
-   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="8">
+   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
    </PIN>
-   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="D16">
+   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="D24X8">
    </PIN>
-   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="D16">
+   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="D24X8">
    </PIN>
    <PIN pinname="Background Color" visible="1">
    </PIN>
@@ -62,7 +62,7 @@
    </NODE>
    <LINK dstnodeid="57" dstpinname="Layer 1" srcnodeid="59" srcpinname="Output Node">
    </LINK>
-   <NODE componentmode="Hidden" id="56" nodename=":MODULES:\vvvv group\Debug\PerfMeter (Debug).v4p" path="C:\Dokumente und Einstellungen\greg\Desktop\vv\vvvv_40beta21\modules\vvvv group\Debug\">
+   <NODE componentmode="Hidden" id="56" nodename=":MODULES:\vvvv group\Debug\PerfMeter (Debug).v4p" path="D:\work\T_GALLERY\vvvv\modules\vvvv group\Debug\">
    <BOUNDS height="0" left="405" top="1125" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="3600" left="405" top="1125" type="Box" width="4800">
@@ -72,7 +72,7 @@
    <PIN pinname="Layer" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="55" nodename=":MODULES:\vvvv group\EX9\AxisAndGrid (DX9).v4p" path="C:\Dokumente und Einstellungen\greg\Desktop\vv\vvvv_40beta21\modules\vvvv group\EX9\">
+   <NODE componentmode="Hidden" id="55" nodename=":MODULES:\vvvv group\EX9\AxisAndGrid (DX9).v4p" path="D:\work\T_GALLERY\vvvv\modules\vvvv group\EX9\">
    <BOUNDS height="0" left="810" top="1500" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="3600" left="810" top="1500" type="Box" width="4800">
@@ -307,9 +307,9 @@
    </PIN>
    <PIN pinname="ID" pintype="Output" visible="1">
    </PIN>
-   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="8">
+   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
    </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="8">
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
    </PIN>
    <PIN pinname="Backbuffer Width" slicecount="1" values="0">
    </PIN>
@@ -319,9 +319,9 @@
    </PIN>
    <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
    </PIN>
-   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="D16">
+   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="D24X8">
    </PIN>
-   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="D16">
+   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="D24X8">
    </PIN>
    <PIN pinname="Background Color" visible="1">
    </PIN>
@@ -970,12 +970,12 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="4" nodename="XMLParser_Renderer.v4p" path="C:\Dokumente und Einstellungen\greg\Desktop\Root\Dev\benchmark\">
+   <NODE componentmode="Hidden" id="4" nodename="XMLParser_Renderer.v4p" path="Y:\vvvv_trunk\tools\benchmarker\">
    <BOUNDS height="100" left="7275" top="1335" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Benchmark Description" visible="1">
    </PIN>
-   <BOUNDS height="7245" left="19155" top="7905" type="Window" width="9300">
+   <BOUNDS height="10665" left="16260" top="2535" type="Window" width="12030">
    </BOUNDS>
    <BOUNDS left="7275" top="1335" type="Box">
    </BOUNDS>
@@ -988,6 +988,8 @@
    <PIN pinname="Additional Renderpass" visible="1">
    </PIN>
    <PIN pinname="Fullscreen" visible="1">
+   </PIN>
+   <PIN pinname="Technique Description" visible="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="4" dstpinname="Benchmark Description" srcnodeid="54" srcpinname="Output String">
@@ -1065,5 +1067,7 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="47" dstpinname="Period" srcnodeid="0" srcpinname="Y Output Value">
+   </LINK>
+   <LINK srcnodeid="54" srcpinname="Output String" dstnodeid="4" dstpinname="Technique Description">
    </LINK>
    </PATCH>
