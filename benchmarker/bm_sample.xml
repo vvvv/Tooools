@@ -7,7 +7,7 @@
 		<SETTING name="Additional Renderpass" value="0"/>
 		<SETTING name="Fullscreen" value="1"/>
 	</RENDERER>
-	<TECHNIQUE duration="5">
+	<TECHNIQUE duration="15">
 		<DESCRIPTION>a simple vertexshader-only test. drawing each instance with its own drawcall.</DESCRIPTION>
 		<TEST patch="Tester_SimpleVertex">
 			<INPUT name="x Resolution" value="20"/>
@@ -16,7 +16,7 @@
 			<INPUT name="Instanced" value="0"/>
 		</TEST>
 	</TECHNIQUE>
-	<TECHNIQUE duration="5">
+	<TECHNIQUE duration="15">
 		<DESCRIPTION>a simple vertexshader-only test. drawing all 50 instances with one drawcall. using shader-instancing.</DESCRIPTION>
 		<TEST patch="Tester_SimpleVertex">
 			<INPUT name="x Resolution" value="20"/>

@@ -55,7 +55,7 @@ technique TSimpleVertex
     pass P0
     {
         //Wrap0 = U;  // useful when mesh is round like a sphere
-        VertexShader = compile vs_2_0 VS();
+        VertexShader = compile vs_1_0 VS();
         PixelShader = null;
     }
 }
