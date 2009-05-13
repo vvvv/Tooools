@@ -187,21 +187,21 @@
    <NODE componentmode="InABox" id="49" nodename="IOBox (String)">
    <BOUNDS height="0" left="10890" top="8895" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="495" left="10890" top="8895" type="Box" width="2250">
+   <BOUNDS height="300" left="10890" top="8895" type="Box" width="1350">
    </BOUNDS>
    <BOUNDS height="160" left="18555" top="8310" type="Window" width="215">
    </BOUNDS>
-   <PIN pinname="Rows" slicecount="1" values="2">
+   <PIN pinname="Rows" slicecount="1" values="1">
    </PIN>
    <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
    </PIN>
-   <PIN pinname="Input String" slicecount="2" values="VVVVersion,|Frames Drawn|">
+   <PIN pinname="Input String" slicecount="1" values="|Frames Drawn|">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="48" nodename="FormatValue (String)">
-   <BOUNDS height="0" left="11625" top="7905" type="Node" width="0">
+   <BOUNDS height="0" left="11145" top="8400" type="Node" width="0">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -627,25 +627,11 @@
    <LINK dstnodeid="53" dstpinname="XSLT Stylesheet" srcnodeid="54" srcpinname="Output String">
    </LINK>
    <NODE componentmode="Hidden" id="20" nodename="About (VVVV)">
-   <BOUNDS height="0" left="10425" top="7920" type="Node" width="0">
+   <BOUNDS height="0" left="14265" top="15465" type="Node" width="0">
    </BOUNDS>
    <PIN pinname="Version" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="19" nodename="Cons (String)">
-   <BOUNDS height="0" left="11130" top="8325" type="Node" width="0">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Input 2" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="19" dstpinname="Input 1" srcnodeid="20" srcpinname="Version">
-   </LINK>
-   <LINK dstnodeid="19" dstpinname="Input 2" srcnodeid="48" srcpinname="Output">
-   </LINK>
    <NODE componentmode="Hidden" id="18" nodename="ShellExecute (Windows)">
    <BOUNDS height="0" left="15135" top="14520" type="Node" width="0">
    </BOUNDS>
@@ -853,13 +839,13 @@
    <NODE componentmode="InABox" id="2" nodename="IOBox (String)">
    <BOUNDS height="0" left="12525" top="13035" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="1785" left="12525" top="13035" type="Box" width="2310">
+   <BOUNDS height="1905" left="12525" top="13035" type="Box" width="2310">
    </BOUNDS>
    <BOUNDS height="160" left="23325" top="22920" type="Window" width="215">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="8" values="CPU,Memory,|Operating System|,|DirectX Version|,|GPU Name|,|GPU Chip Type|,|GPU Memory|,|GPU Driver Version|">
+   <PIN pinname="Input String" slicecount="9" values="CPU,Memory,|Operating System|,|DirectX Version|,|GPU Name|,|GPU Chip Type|,|GPU Memory|,|GPU Driver Version|,VVVVersion">
    </PIN>
-   <PIN pinname="Rows" slicecount="1" values="8">
+   <PIN pinname="Rows" slicecount="1" values="9">
    </PIN>
    <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
    </PIN>
@@ -910,8 +896,6 @@
    <PIN pinname="Technique Settings" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="0" dstpinname="Value" srcnodeid="19" srcpinname="Output">
-   </LINK>
    <LINK dstnodeid="0" dstpinname="Name" srcnodeid="49" srcpinname="Output String">
    </LINK>
    <LINK dstnodeid="51" dstpinname="Input 2" srcnodeid="0" srcpinname="Technique Settings">
@@ -922,6 +906,22 @@
    </LINK>
    <LINK dstnodeid="1" dstpinname="Name" srcnodeid="2" srcpinname="Output String">
    </LINK>
-   <LINK srcnodeid="11" srcpinname="Output" dstnodeid="1" dstpinname="Value">
+   <NODE nodename="Cons (String)" componentmode="Hidden" id="63">
+   <BOUNDS type="Node" left="14265" top="15930" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="11" srcpinname="Output" dstnodeid="63" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Version" dstnodeid="63" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="63" srcpinname="Output" dstnodeid="1" dstpinname="Value">
+   </LINK>
+   <LINK srcnodeid="48" srcpinname="Output" dstnodeid="0" dstpinname="Value">
    </LINK>
    </PATCH>
