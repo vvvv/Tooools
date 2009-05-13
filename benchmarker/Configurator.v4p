@@ -857,6 +857,8 @@
    </PIN>
    <PIN pinname="Sub Tag" slicecount="1" values="SETTING">
    </PIN>
+   <PIN pinname="Value" visible="1">
+   </PIN>
    </NODE>
    <NODE componentmode="InABox" id="26" nodename="IOBox (String)">
    <BOUNDS height="0" left="6750" top="17385" type="Node" width="0">
@@ -1063,10 +1065,6 @@
    <LINK dstnodeid="15" dstpinname="Input" srcnodeid="18" srcpinname="Output">
    </LINK>
    <LINK dstnodeid="15" dstpinname="Index" srcnodeid="18" srcpinname="Query Index">
-   </LINK>
-   <LINK dstnodeid="27" dstpinname="Renderer Settings Values" srcnodeid="15" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="27" dstpinname="Renderer Settings" srcnodeid="26" srcpinname="Output String">
    </LINK>
    <NODE componentmode="Hidden" id="14" nodename="XSLT (XML)">
    <BOUNDS height="0" left="1470" top="25740" type="Node" width="0">
@@ -1302,6 +1300,8 @@
    </LINK>
    <LINK dstnodeid="3" dstpinname="Switch" srcnodeid="1" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="26" srcpinname="Output String" dstnodeid="27" dstpinname="Name">
+   <LINK dstnodeid="27" dstpinname="Name" srcnodeid="26" srcpinname="Output String">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="Output" dstnodeid="27" dstpinname="Value">
    </LINK>
    </PATCH>
