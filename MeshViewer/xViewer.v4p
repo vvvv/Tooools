@@ -363,7 +363,7 @@
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
+   <PIN pinname="Layer 1" visible="1">
    </PIN>
    <PIN pinname="Layer 2" slicecount="1" visible="1" values="||">
    </PIN>
@@ -461,5 +461,61 @@
    <LINK dstnodeid="1" dstpinname="Input Node" srcnodeid="18" srcpinname="Output">
    </LINK>
    <LINK dstnodeid="1" dstpinname="Index" srcnodeid="12" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" id="35" nodename=":EFFECTS:\PhongDirectional.fx">
+   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Mesh" visible="1">
+   </PIN>
+   <PIN pinname="WorldMatrix" visible="1">
+   </PIN>
+   <PIN pinname="Render State" visible="1">
+   </PIN>
+   <BOUNDS height="0" left="45" top="7875" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="MatDif" visible="1">
+   </PIN>
+   <PIN pinname="WorldMat" visible="1">
+   </PIN>
+   <PIN pinname="Tex0" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Set Technique to render">
+   </PIN>
+   <BOUNDS height="12000" left="7035" top="16905" type="Window" width="12000">
+   </BOUNDS>
+   <PIN pinname="Ambient Color" slicecount="9" visible="1" values="|0.50000,0.50000,0.50000,1.00000|,|0.50000,0.50000,0.50000,0.00000|,|0.50000,0.50000,0.50000,0.00000|,|0.50000,0.50000,0.50000,0.00000|,|0.50000,0.50000,0.50000,0.00000|,|0.50000,0.50000,0.50000,0.00000|,|0.50000,0.50000,0.50000,0.00000|,|0.50000,0.50000,0.50000,0.00000|,|0.50000,0.50000,0.50000,0.00000|">
+   </PIN>
+   <PIN pinname="Ambient Light" visible="1">
+   </PIN>
+   <PIN pinname="Technique" slicecount="1" values="| TPhongDirectional|">
+   </PIN>
+   <PIN pinname="Diffuse Light">
+   </PIN>
+   <PIN pinname="Specular Light">
+   </PIN>
+   <PIN pinname="Specular Color" slicecount="1" values="|0.64302,0.64565,0.65054,1.00000|">
+   </PIN>
+   <PIN pinname="Diffuse Color" slicecount="1" values="|0.99833,0.99833,0.99833,1.00000|">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Light Direction XYZ" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="45" top="7875" width="6000" height="6000">
+   </BOUNDS>
+   </NODE>
+   <LINK dstnodeid="35" dstpinname="Enabled" srcnodeid="21" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="35" dstpinname="Render State" srcnodeid="30" srcpinname="Render State Out">
+   </LINK>
+   <LINK dstnodeid="35" dstpinname="Light Direction XYZ" srcnodeid="19" srcpinname="Light Direction Out">
+   </LINK>
+   <LINK dstnodeid="35" dstpinname="Mesh" srcnodeid="14" srcpinname="Output Node">
+   </LINK>
+   <LINK dstnodeid="7" dstpinname="Layer 1" srcnodeid="35" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="35" dstpinname="Texture" srcnodeid="1" srcpinname="Output Node">
    </LINK>
    </PATCH>
