@@ -1,8 +1,8 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv40beta21.dtd" >
-   <PATCH nodename="C:\Users\joreg\dev\vvvv_trunk\tools\benchmarker\BENCHMARKER.v4p" locked="0">
+   <PATCH nodename="C:\Dokumente und Einstellungen\greg\Desktop\Root\Dev\benchmark\BENCHMARKER.v4p" locked="0">
    <BOUNDS height="9630" left="6105" top="450" type="Window" width="15045">
    </BOUNDS>
-   <NODE componentmode="Hidden" id="19" nodename="Renderer.v4p" path="C:\Users\joreg\dev\vvvv_trunk\tools\benchmarker\">
+   <NODE componentmode="Hidden" id="19" nodename="Renderer.v4p" path="C:\Dokumente und Einstellungen\greg\Desktop\Root\Dev\benchmark\">
    <BOUNDS height="100" left="3480" top="8100" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="3600" left="3480" top="8100" type="Box" width="4800">
@@ -28,7 +28,7 @@
    <PIN pinname="Manual Benchmark" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="18" nodename="Configurator.v4p" path="C:\Users\joreg\dev\vvvv_trunk\tools\benchmarker\">
+   <NODE componentmode="Hidden" id="18" nodename="Configurator.v4p" path="C:\Dokumente und Einstellungen\greg\Desktop\Root\Dev\benchmark\">
    <BOUNDS height="270" left="4230" top="3600" type="Node" width="1380">
    </BOUNDS>
    <BOUNDS height="3600" left="4230" top="3600" type="Box" width="4800">
@@ -253,7 +253,7 @@
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" values="3">
    </PIN>
    </NODE>
    <LINK dstnodeid="18" dstpinname="Technique" hiddenwhenlocked="1" srcnodeid="7" srcpinname="Y Output Value">
@@ -340,7 +340,7 @@
    </LINK>
    <LINK dstnodeid="19" dstpinname="Manual Benchmark" hiddenwhenlocked="1" srcnodeid="8" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" id="1" nodename="Logger.v4p" path="C:\Users\joreg\dev\vvvv_trunk\tools\benchmarker\">
+   <NODE componentmode="Hidden" id="1" nodename="Logger.v4p" path="C:\Dokumente und Einstellungen\greg\Desktop\Root\Dev\benchmark\">
    <PIN pinname="Current Technique" visible="1">
    </PIN>
    <PIN pinname="Technique Running" visible="1">
@@ -390,7 +390,7 @@
    </LINK>
    <LINK dstnodeid="19" dstpinname="Log Layers" srcnodeid="1" srcpinname="Log Layers">
    </LINK>
-   <NODE componentmode="Hidden" id="0" nodename="testers\_Tester_Dummy.v4p" path="C:\Users\joreg\dev\vvvv_trunk\tools\benchmarker\testers\">
+   <NODE componentmode="Hidden" id="0" nodename="testers\Tester_Pixel_CubeTexture.v4p" path="C:\Dokumente und Einstellungen\greg\Desktop\Root\Dev\benchmark\testers\">
    <BOUNDS height="0" left="1935" top="5100" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="3600" left="1935" top="5100" type="Box" width="4800">
@@ -403,7 +403,7 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Technique">
+   <PIN pinname="Technique" slicecount="1" values="| ReflectAndRefract|">
    </PIN>
    </NODE>
    <LINK dstnodeid="18" dstpinname="Content ID" linkstyle="Bezier" srcnodeid="0" srcpinname="ID">
