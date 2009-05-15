@@ -1,8 +1,8 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv40beta21.dtd" >
-   <PATCH nodename="C:\Users\joreg\dev\vvvv_trunk\tools\benchmarker\BENCHMARKER.v4p" locked="0">
-   <BOUNDS height="9885" left="6105" top="450" type="Window" width="13545">
+   <PATCH nodename="C:\Dokumente und Einstellungen\greg\Desktop\Root\Dev\benchmark\BENCHMARKER.v4p" locked="0">
+   <BOUNDS height="9840" left="6105" top="450" type="Window" width="13545">
    </BOUNDS>
-   <NODE componentmode="Hidden" id="19" nodename="Renderer.v4p" path="C:\Users\joreg\dev\vvvv_trunk\tools\benchmarker\">
+   <NODE componentmode="Hidden" id="19" nodename="Renderer.v4p" path="C:\Dokumente und Einstellungen\greg\Desktop\Root\Dev\benchmark\">
    <BOUNDS height="100" left="3480" top="8100" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="3600" left="3480" top="8100" type="Box" width="4800">
@@ -13,7 +13,7 @@
    </PIN>
    <PIN pinname="Settings" visible="1">
    </PIN>
-   <PIN pinname="Log Layers" visible="1">
+   <PIN pinname="Log Layers" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Start" visible="1">
    </PIN>
@@ -28,39 +28,7 @@
    <PIN pinname="Manual Benchmark" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="18" nodename="Logger.v4p" path="C:\Users\joreg\dev\vvvv_trunk\tools\benchmarker\">
-   <BOUNDS height="100" left="5430" top="5085" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="3600" left="5430" top="5085" type="Box" width="4800">
-   </BOUNDS>
-   <BOUNDS height="16965" left="9915" top="480" type="Window" width="17790">
-   </BOUNDS>
-   <PIN pinname="Benchmark Description" visible="1">
-   </PIN>
-   <PIN pinname="Log Layers" visible="1">
-   </PIN>
-   <PIN pinname="Keyboard" visible="1">
-   </PIN>
-   <PIN pinname="Start" visible="1">
-   </PIN>
-   <PIN pinname="Current Technique" visible="1">
-   </PIN>
-   <PIN pinname="Technique Running" visible="1">
-   </PIN>
-   <PIN pinname="Benchmark Description File" visible="1">
-   </PIN>
-   <PIN pinname="Technique Description" visible="1">
-   </PIN>
-   <PIN pinname="Techniques Count" visible="1">
-   </PIN>
-   <PIN pinname="Technique Name" visible="1">
-   </PIN>
-   <PIN pinname="System Info" visible="1">
-   </PIN>
-   <PIN pinname="Benchmark Running" visible="1">
-   </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" id="17" nodename="Configurator.v4p" path="C:\Users\joreg\dev\vvvv_trunk\tools\benchmarker\">
+   <NODE componentmode="Hidden" id="17" nodename="Configurator.v4p" path="C:\Dokumente und Einstellungen\greg\Desktop\Root\Dev\benchmark\">
    <BOUNDS height="270" left="4230" top="3600" type="Node" width="1380">
    </BOUNDS>
    <BOUNDS height="3600" left="4230" top="3600" type="Box" width="4800">
@@ -149,9 +117,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="13" nodename="IOBox (String)">
-   <BOUNDS height="270" left="4500" top="8085" type="Node" width="3210">
+   <BOUNDS height="270" left="4905" top="8085" type="Node" width="3210">
    </BOUNDS>
-   <BOUNDS height="510" left="4500" top="8085" type="Box" width="1950">
+   <BOUNDS height="510" left="4905" top="8085" type="Box" width="1950">
    </BOUNDS>
    <BOUNDS height="160" left="0" top="0" type="Window" width="215">
    </BOUNDS>
@@ -162,8 +130,6 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK dstnodeid="19" dstpinname="Log Layers" srcnodeid="18" srcpinname="Log Layers">
-   </LINK>
    <NODE componentmode="InABox" id="12" nodename="IOBox (String)">
    <BOUNDS height="0" left="4425" top="2205" type="Node" width="0">
    </BOUNDS>
@@ -192,13 +158,7 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK dstnodeid="18" dstpinname="Current Technique" srcnodeid="17" srcpinname="Current Technique">
-   </LINK>
    <LINK dstnodeid="19" dstpinname="Settings" srcnodeid="17" srcpinname="Technique Description">
-   </LINK>
-   <LINK dstnodeid="18" dstpinname="Technique Running" srcnodeid="17" srcpinname="Technique Running">
-   </LINK>
-   <LINK dstnodeid="18" dstpinname="Benchmark Description File" srcnodeid="12" srcpinname="Output String">
    </LINK>
    <LINK dstnodeid="19" dstpinname="Benchmark Running" srcnodeid="17" srcpinname="Benchmark Running">
    </LINK>
@@ -218,12 +178,6 @@
    <PIN pinname="Size" slicecount="1" values="11">
    </PIN>
    </NODE>
-   <LINK dstnodeid="18" dstpinname="Technique Description" srcnodeid="17" srcpinname="Technique Description">
-   </LINK>
-   <LINK dstnodeid="18" dstpinname="Techniques Count" srcnodeid="17" srcpinname="Techniques Count">
-   </LINK>
-   <LINK dstnodeid="18" dstpinname="Technique Name" srcnodeid="17" srcpinname="Technique Name">
-   </LINK>
    <NODE componentmode="InABox" id="9" nodename="IOBox (Value Advanced)">
    <BOUNDS height="0" left="4680" top="2520" type="Node" width="0">
    </BOUNDS>
@@ -339,7 +293,7 @@
    </BOUNDS>
    <BOUNDS height="160" left="21195" top="11490" type="Window" width="215">
    </BOUNDS>
-   <PIN pinname="Input String" visible="1">
+   <PIN pinname="Input String" visible="1" slicecount="8" values="|Intel(R) Core(TM)2 Quad CPU    Q9550  @ 2.83GHz (4 CPUs)|,|3070MB RAM|,|Windows XP Professional (5.1, Build 2600) Service Pack 3 (2600.xpsp_sp3_gdr.090206-1234)|,|DirectX 9.0c (4.09.0000.0904)|,|NVIDIA GeForce 8800 GT|,|GeForce 8800 GT|,|512.0 MB|,6.14.0011.7529">
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="8">
    </PIN>
@@ -350,8 +304,6 @@
    <PIN pinname="Character Encoding" slicecount="1" values="UTF8">
    </PIN>
    </NODE>
-   <LINK dstnodeid="3" dstpinname="Input String" srcnodeid="18" srcpinname="System Info">
-   </LINK>
    <NODE componentmode="InABox" id="2" nodename="IOBox (String)">
    <BOUNDS height="270" left="7605" top="6255" type="Node" width="960">
    </BOUNDS>
@@ -384,13 +336,61 @@
    </NODE>
    <LINK dstnodeid="19" dstpinname="Technique Duration" srcnodeid="17" srcpinname="Technique Duration">
    </LINK>
-   <LINK dstnodeid="18" dstpinname="Benchmark Running" srcnodeid="17" srcpinname="Benchmark Running">
-   </LINK>
    <LINK dstnodeid="19" dstpinname="Technique Running" srcnodeid="17" srcpinname="Technique Running">
    </LINK>
-   <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="19" dstpinname="Manual Benchmark" hiddenwhenlocked="1">
+   <LINK dstnodeid="19" dstpinname="Manual Benchmark" hiddenwhenlocked="1" srcnodeid="7" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" id="0" nodename="testers\_Tester_Dummy.v4p" path="C:\Users\joreg\dev\vvvv_trunk\tools\benchmarker\testers\">
+   <NODE id="18" nodename="Logger.v4p" componentmode="Hidden" path="C:\Dokumente und Einstellungen\greg\Desktop\Root\Dev\benchmark\">
+   <PIN pinname="Current Technique" visible="1">
+   </PIN>
+   <PIN pinname="Technique Running" visible="1">
+   </PIN>
+   <PIN pinname="Benchmark Description File" visible="1">
+   </PIN>
+   <PIN pinname="Technique Description" visible="1">
+   </PIN>
+   <PIN pinname="Techniques Count" visible="1">
+   </PIN>
+   <PIN pinname="Technique Name" visible="1">
+   </PIN>
+   <PIN pinname="Benchmark Running" visible="1">
+   </PIN>
+   <BOUNDS type="Node" height="100" left="5430" top="5085" width="100">
+   </BOUNDS>
+   <BOUNDS type="Box" height="3600" left="5430" top="5085" width="4800">
+   </BOUNDS>
+   <BOUNDS type="Window" height="16965" left="9915" top="480" width="17790">
+   </BOUNDS>
+   <PIN pinname="Benchmark Description" visible="1">
+   </PIN>
+   <PIN pinname="Log Layers" visible="1">
+   </PIN>
+   <PIN pinname="Keyboard" visible="1">
+   </PIN>
+   <PIN pinname="Start" visible="1">
+   </PIN>
+   <PIN pinname="System Info" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="17" srcpinname="Benchmark Running" dstnodeid="18" dstpinname="Benchmark Running">
+   </LINK>
+   <LINK srcnodeid="18" srcpinname="System Info" dstnodeid="3" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="17" srcpinname="Technique Name" dstnodeid="18" dstpinname="Technique Name">
+   </LINK>
+   <LINK srcnodeid="17" srcpinname="Techniques Count" dstnodeid="18" dstpinname="Techniques Count">
+   </LINK>
+   <LINK srcnodeid="17" srcpinname="Technique Description" dstnodeid="18" dstpinname="Technique Description">
+   </LINK>
+   <LINK srcnodeid="12" srcpinname="Output String" dstnodeid="18" dstpinname="Benchmark Description File">
+   </LINK>
+   <LINK srcnodeid="17" srcpinname="Technique Running" dstnodeid="18" dstpinname="Technique Running">
+   </LINK>
+   <LINK srcnodeid="17" srcpinname="Current Technique" dstnodeid="18" dstpinname="Current Technique">
+   </LINK>
+   <LINK srcnodeid="18" srcpinname="Log Layers" dstnodeid="19" dstpinname="Log Layers">
+   </LINK>
+   <NODE componentmode="Hidden" id="0" nodename="testers\_Tester_Dummy.v4p" path="C:\Dokumente und Einstellungen\greg\Desktop\Root\Dev\benchmark\testers\">
    <BOUNDS height="0" left="1935" top="5100" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="3600" left="1935" top="5100" type="Box" width="4800">
