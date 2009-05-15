@@ -23,6 +23,10 @@
    </PIN>
    <PIN pinname="Duration" visible="1">
    </PIN>
+   <PIN pinname="Technique Duration" visible="1">
+   </PIN>
+   <PIN pinname="Manual Benchmark" visible="1">
+   </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="18" nodename="Logger.v4p" path="C:\Users\joreg\dev\vvvv_trunk\tools\benchmarker\">
    <BOUNDS height="100" left="5430" top="5085" type="Node" width="100">
@@ -52,6 +56,8 @@
    <PIN pinname="Technique Name" visible="1">
    </PIN>
    <PIN pinname="System Info" visible="1">
+   </PIN>
+   <PIN pinname="Benchmark Running" visible="1">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="17" nodename="Configurator.v4p" path="C:\Users\joreg\dev\vvvv_trunk\tools\benchmarker\">
@@ -96,6 +102,8 @@
    <PIN pinname="Manual Technique" visible="1">
    </PIN>
    <PIN pinname="Technique" visible="1">
+   </PIN>
+   <PIN pinname="Technique Duration" visible="1">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="16" nodename="IOBox (String)">
@@ -374,7 +382,15 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="0" nodename="testers\Tester_SimpleVertex.v4p" path="C:\Users\joreg\dev\vvvv_trunk\tools\benchmarker\testers\">
+   <LINK dstnodeid="19" dstpinname="Technique Duration" srcnodeid="17" srcpinname="Technique Duration">
+   </LINK>
+   <LINK dstnodeid="18" dstpinname="Benchmark Running" srcnodeid="17" srcpinname="Benchmark Running">
+   </LINK>
+   <LINK dstnodeid="19" dstpinname="Technique Running" srcnodeid="17" srcpinname="Technique Running">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="19" dstpinname="Manual Benchmark" hiddenwhenlocked="1">
+   </LINK>
+   <NODE componentmode="Hidden" id="0" nodename="testers\_Tester_Dummy.v4p" path="C:\Users\joreg\dev\vvvv_trunk\tools\benchmarker\testers\">
    <BOUNDS height="0" left="1935" top="5100" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="3600" left="1935" top="5100" type="Box" width="4800">
