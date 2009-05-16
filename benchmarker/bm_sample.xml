@@ -26,10 +26,12 @@
 		</TEST>
 	</TECHNIQUE>
 	<TECHNIQUE duration="10">
+		<DESCRIPTION>soft shadows: a pixel shader by flux.</DESCRIPTION>
 		<TEST patch="Tester_Pixel">
 		</TEST>
 	</TECHNIQUE>
 	<TECHNIQUE duration="10">
+		<DESCRIPTION>cube texture: a pixel shader by kalle.</DESCRIPTION>
 		<TEST patch="Tester_Pixel_CubeTexture">
 		</TEST>
 	</TECHNIQUE>
