@@ -390,7 +390,7 @@
    </LINK>
    <LINK dstnodeid="19" dstpinname="Log Layers" srcnodeid="1" srcpinname="Log Layers">
    </LINK>
-   <NODE componentmode="Hidden" id="0" nodename="testers\Tester_Pixel_CubeTexture.v4p" path="C:\Dokumente und Einstellungen\greg\Desktop\Root\Dev\benchmark\testers\">
+   <NODE componentmode="Hidden" id="0" nodename="testers\_Tester_Dummy.v4p" path="C:\Dokumente und Einstellungen\greg\Desktop\Root\Dev\benchmark\testers\">
    <BOUNDS height="0" left="1935" top="5100" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="3600" left="1935" top="5100" type="Box" width="4800">
@@ -403,7 +403,7 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Technique" slicecount="1" values="| ReflectAndRefract|">
+   <PIN pinname="Technique">
    </PIN>
    </NODE>
    <LINK dstnodeid="18" dstpinname="Content ID" linkstyle="Bezier" srcnodeid="0" srcpinname="ID">
