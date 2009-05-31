@@ -1,0 +1,155 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv40beta21.dtd" >
+   <PATCH nodename="E:\jobs\2009\hagenberg\aec-fassade\joregs\vvvv_AEC_Facade\3dPreview.v4p">
+   <BOUNDS height="6000" left="15840" top="9135" type="Window" width="9000">
+   </BOUNDS>
+   <NODE componentmode="InABox" id="4" nodename="IOBox (Color)">
+   <BOUNDS height="0" left="2730" top="750" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="480" left="2730" top="750" type="Box" width="2250">
+   </BOUNDS>
+   <BOUNDS height="160" left="8775" top="9855" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Color Output" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Ambient Color|">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="3" nodename="XFile (EX9.Geometry Load)">
+   <BOUNDS height="0" left="2040" top="1620" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Mesh" visible="1">
+   </PIN>
+   <PIN pinname="Filename" slicecount="1" values="..\..\woeis\dmx2id\xFiles\aec_facade_v4_sorted.x">
+   </PIN>
+   <PIN pinname="Reload" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="2" nodename=":EFFECTS:\PhongDirectional.fx">
+   <BOUNDS height="0" left="2070" top="2490" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="6000" left="2070" top="2490" type="Box" width="6000">
+   </BOUNDS>
+   <BOUNDS height="12000" left="15375" top="13260" type="Window" width="12000">
+   </BOUNDS>
+   <PIN pinname="Mesh" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Ambient Color" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InAWindow" id="1" nodename="Renderer (EX9)">
+   <BOUNDS height="0" left="3030" top="4800" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="1800" left="3030" top="4800" type="Box" width="2400">
+   </BOUNDS>
+   <BOUNDS height="7560" left="15375" top="450" type="Window" width="9720">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="D24X8">
+   </PIN>
+   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="D24X8">
+   </PIN>
+   <PIN pinname="View Transform" visible="1">
+   </PIN>
+   <PIN pinname="Projection Transform" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|3D Preview|">
+   </PIN>
+   <PIN pinname="Actual Backbuffer Width" visible="1">
+   </PIN>
+   <PIN pinname="Actual Backbuffer Height" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Ratio Transform" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="2" dstpinname="Mesh" srcnodeid="3" srcpinname="Mesh">
+   </LINK>
+   <LINK dstnodeid="2" dstpinname="Ambient Color" srcnodeid="4" srcpinname="Color Output">
+   </LINK>
+   <NODE componentmode="Hidden" id="0" nodename=":MODULES:\vvvv group\Transform\Camera (Transform Softimage).v4p" path="C:\Documents and Settings\joreg\Desktop\vvvvs\vvvv_40beta21\modules\vvvv group\Transform\">
+   <BOUNDS height="0" left="4290" top="3360" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="3600" left="4290" top="3360" type="Box" width="4800">
+   </BOUNDS>
+   <BOUNDS height="6000" left="18030" top="13320" type="Window" width="9000">
+   </BOUNDS>
+   <PIN pinname="View" visible="1">
+   </PIN>
+   <PIN pinname="Projection" visible="1">
+   </PIN>
+   <PIN pinname="Inital Distance" slicecount="1" values="1.6">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="1" dstpinname="View Transform" srcnodeid="0" srcpinname="View">
+   </LINK>
+   <LINK dstnodeid="1" dstpinname="Projection Transform" srcnodeid="0" srcpinname="Projection">
+   </LINK>
+   <NODE nodename="Group (EX9)" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="1470" top="4050" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Layer 2" visible="1">
+   </PIN>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Layer" dstnodeid="5" dstpinname="Layer 2">
+   </LINK>
+   <NODE nodename=":MODULES:\vvvv group\EX9\AxisAndGrid (DX9).v4p" componentmode="Hidden" id="6" path="C:\Documents and Settings\joreg\Desktop\vvvvs\vvvv_40beta21\modules\vvvv group\EX9\">
+   <BOUNDS type="Node" left="1155" top="3480" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1155" top="3480" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="8760" top="12255" width="9000" height="6000">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Layer" dstnodeid="5" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Layer" dstnodeid="1" dstpinname="Layers">
+   </LINK>
+   <NODE nodename="Translate (Transform)" componentmode="Hidden" id="7">
+   <BOUNDS type="Node" left="3555" top="1530" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="X" slicecount="1" values="-0.76">
+   </PIN>
+   </NODE>
+   <NODE nodename="Rotate (Transform)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="3570" top="1980" width="645" height="270">
+   </BOUNDS>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Y" slicecount="1" values="0.06">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Transform Out" dstnodeid="8" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Transform Out" dstnodeid="2" dstpinname="Transform">
+   </LINK>
+   <NODE nodename="AspectRatio (Transform)" componentmode="Hidden" id="9">
+   <BOUNDS type="Node" left="5130" top="4785" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Aspect Width" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Height" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Actual Backbuffer Width" dstnodeid="9" dstpinname="Aspect Width">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Actual Backbuffer Height" dstnodeid="9" dstpinname="Aspect Height">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Transform Out" dstnodeid="1" dstpinname="Aspect Ratio Transform">
+   </LINK>
+   </PATCH>

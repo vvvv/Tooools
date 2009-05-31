@@ -1,0 +1,179 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv40beta21.dtd" >
+   <PATCH nodename="E:\jobs\2009\hagenberg\aec-fassade\joregs\UDPSender.v4p">
+   <BOUNDS type="Window" left="14295" top="9360" width="9000" height="6000">
+   </BOUNDS>
+   <NODE componentmode="InAWindow" id="17" nodename="AECEncoder.dll">
+   <BOUNDS height="100" left="2310" top="3405" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS left="2310" top="3405" type="Box">
+   </BOUNDS>
+   <PIN pinname="Address" visible="1">
+   </PIN>
+   <PIN pinname="R" visible="1">
+   </PIN>
+   <PIN pinname="G" visible="1">
+   </PIN>
+   <PIN pinname="B" visible="1">
+   </PIN>
+   <PIN pinname="Protocol" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="16" nodename="I (Spreads)">
+   <BOUNDS height="0" left="1695" top="2805" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname=".. To [" slicecount="1" values="1085">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="17" dstpinname="Address" srcnodeid="16" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" id="15" nodename="RGB (Color Split)">
+   <BOUNDS height="0" left="2685" top="2085" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Red" visible="1">
+   </PIN>
+   <PIN pinname="Green" visible="1">
+   </PIN>
+   <PIN pinname="Blue" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="14" nodename="Multiply (Value)">
+   <BOUNDS height="0" left="2640" top="2700" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Input 2" slicecount="1" values="255">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="14" dstpinname="Input 1" srcnodeid="15" srcpinname="Red">
+   </LINK>
+   <NODE componentmode="Hidden" id="13" nodename="Multiply (Value)">
+   <BOUNDS height="0" left="3045" top="2715" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Input 2" slicecount="1" values="255">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="12" nodename="Multiply (Value)">
+   <BOUNDS height="0" left="3450" top="2730" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Input 2" slicecount="1" values="255">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="13" dstpinname="Input 1" srcnodeid="15" srcpinname="Green">
+   </LINK>
+   <LINK dstnodeid="12" dstpinname="Input 1" srcnodeid="15" srcpinname="Blue">
+   </LINK>
+   <LINK dstnodeid="17" dstpinname="R" srcnodeid="14" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="17" dstpinname="G" srcnodeid="13" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="17" dstpinname="B" srcnodeid="12" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" id="11" nodename="Add (String Spectral)">
+   <BOUNDS height="0" left="2310" top="3900" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="11" dstpinname="Input" srcnodeid="17" srcpinname="Protocol">
+   </LINK>
+   <NODE componentmode="Hidden" id="10" nodename="UDP (Network Client)">
+   <BOUNDS height="0" left="2310" top="4485" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Remote Port" visible="1">
+   </PIN>
+   <PIN pinname="Do Send" visible="1">
+   </PIN>
+   <PIN pinname="Remote Host" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="10" dstpinname="Input" srcnodeid="11" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="InABox" id="9" nodename="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="6480" top="2910" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="480" left="6480" top="2910" type="Box" width="480">
+   </BOUNDS>
+   <BOUNDS height="160" left="2985" top="19575" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Show Slider" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Slider Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Do Send|">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="10" dstpinname="Do Send" srcnodeid="9" srcpinname="Y Output Value">
+   </LINK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="19">
+   <BOUNDS type="Node" left="1710" top="1080" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1710" top="1080" width="2250" height="480">
+   </BOUNDS>
+   <BOUNDS type="Window" left="17310" top="11910" width="215" height="160">
+   </BOUNDS>
+   <PIN pinname="Color Output" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Color">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="19" srcpinname="Color Output" dstnodeid="15" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="20">
+   <BOUNDS type="Node" left="5310" top="2910" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5310" top="2910" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Window" left="19380" top="13260" width="215" height="160">
+   </BOUNDS>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Remote Port|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="20" srcpinname="Y Output Value" dstnodeid="10" dstpinname="Remote Port">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="22">
+   <BOUNDS type="Node" left="4200" top="2925" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4200" top="2925" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Window" left="19560" top="13005" width="215" height="160">
+   </BOUNDS>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Remote Host|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="22" srcpinname="Output String" dstnodeid="10" dstpinname="Remote Host">
+   </LINK>
+   </PATCH>
