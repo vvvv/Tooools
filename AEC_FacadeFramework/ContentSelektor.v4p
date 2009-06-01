@@ -1,8 +1,8 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv40beta21.dtd" >
-   <PATCH nodename="E:\jobs\2009\hagenberg\aec-fassade\joregs\vvvv_AEC_Facade\ContentSelektor.v4p">
+   <PATCH nodename="Y:\vvvv33_trunk\tools\AEC_FacadeFramework\ContentSelektor.v4p">
    <BOUNDS height="8505" left="14070" top="1920" type="Window" width="11070">
    </BOUNDS>
-   <NODE componentmode="InABox" id="15" nodename="IOBox (Enumerations)">
+   <NODE componentmode="InABox" id="14" nodename="IOBox (Enumerations)">
    <BOUNDS height="0" left="6405" top="3825" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="240" left="6405" top="3825" type="Box" width="3720">
@@ -14,7 +14,7 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="Contents">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="14" nodename="Dir (File)">
+   <NODE componentmode="Hidden" id="13" nodename="Dir (File)">
    <BOUNDS height="0" left="1575" top="825" type="Node" width="0">
    </BOUNDS>
    <PIN pinname="Directory" slicecount="1" values="contents">
@@ -28,7 +28,7 @@
    <PIN pinname="Filenames" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="13" nodename="CreateNode (VVVV)">
+   <NODE componentmode="Hidden" id="12" nodename="CreateNode (VVVV)">
    <BOUNDS height="0" left="5115" top="6645" type="Node" width="0">
    </BOUNDS>
    <PIN pinname="Node Name" visible="1">
@@ -40,7 +40,7 @@
    <PIN pinname="Parent Patch" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="12" nodename="Enum2Ord (Enumerations)">
+   <NODE componentmode="Hidden" id="11" nodename="Enum2Ord (Enumerations)">
    <BOUNDS height="0" left="6405" top="4365" type="Node" width="0">
    </BOUNDS>
    <PIN pinname="Enum" visible="1">
@@ -48,7 +48,7 @@
    <PIN pinname="Ord Value" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="11" nodename="CreateEnum (Enumerations)">
+   <NODE componentmode="Hidden" id="10" nodename="CreateEnum (Enumerations)">
    <BOUNDS height="0" left="1845" top="5850" type="Node" width="0">
    </BOUNDS>
    <PIN pinname="Strings" visible="1">
@@ -58,7 +58,7 @@
    <PIN pinname="Item Count" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="12" dstpinname="Enum" srcnodeid="15" srcpinname="Output Enum">
+   <LINK dstnodeid="11" dstpinname="Enum" srcnodeid="14" srcpinname="Output Enum">
    </LINK>
    <NODE componentmode="Hidden" id="9" nodename="Copy (String)">
    <BOUNDS height="0" left="2505" top="3585" type="Node" width="0">
@@ -70,7 +70,7 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="9" dstpinname="Input" srcnodeid="14" srcpinname="Short Filenames">
+   <LINK dstnodeid="9" dstpinname="Input" srcnodeid="13" srcpinname="Short Filenames">
    </LINK>
    <NODE componentmode="Hidden" id="8" nodename="EQ (String)">
    <BOUNDS height="0" left="2490" top="4170" type="Node" width="0">
@@ -94,7 +94,7 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="7" dstpinname="Input" srcnodeid="14" srcpinname="Filenames">
+   <LINK dstnodeid="7" dstpinname="Input" srcnodeid="13" srcpinname="Filenames">
    </LINK>
    <LINK dstnodeid="7" dstpinname="Select" srcnodeid="8" srcpinname="Output">
    </LINK>
@@ -108,7 +108,7 @@
    </NODE>
    <LINK dstnodeid="6" dstpinname="Filename" srcnodeid="7" srcpinname="Output">
    </LINK>
-   <LINK dstnodeid="11" dstpinname="Strings" srcnodeid="6" srcpinname="Shortname">
+   <LINK dstnodeid="10" dstpinname="Strings" srcnodeid="6" srcpinname="Shortname">
    </LINK>
    <NODE componentmode="InABox" id="5" nodename="IOBox (Value Advanced)">
    <BOUNDS height="0" left="1845" top="6300" type="Node" width="0">
@@ -120,7 +120,7 @@
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="5" dstpinname="Y Input Value" srcnodeid="11" srcpinname="Item Count">
+   <LINK dstnodeid="5" dstpinname="Y Input Value" srcnodeid="10" srcpinname="Item Count">
    </LINK>
    <NODE componentmode="Hidden" id="4" nodename="GetSlice (String)">
    <BOUNDS height="0" left="5115" top="5610" type="Node" width="0">
@@ -132,11 +132,11 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="4" dstpinname="Index" srcnodeid="12" srcpinname="Ord Value">
+   <LINK dstnodeid="4" dstpinname="Index" srcnodeid="11" srcpinname="Ord Value">
    </LINK>
    <LINK dstnodeid="4" dstpinname="Input" srcnodeid="7" srcpinname="Output">
    </LINK>
-   <LINK dstnodeid="13" dstpinname="Node Name" srcnodeid="4" srcpinname="Output">
+   <LINK dstnodeid="12" dstpinname="Node Name" srcnodeid="4" srcpinname="Output">
    </LINK>
    <NODE componentmode="InABox" id="3" nodename="IOBox (Value Advanced)">
    <BOUNDS height="0" left="7545" top="5580" type="Node" width="0">
@@ -148,6 +148,8 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="|Target Node ID|">
    </PIN>
    <PIN pinname="X Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="2" nodename="IOBox (Value Advanced)">
@@ -176,9 +178,7 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="Rescan">
    </PIN>
    </NODE>
-   <LINK dstnodeid="14" dstpinname="doRescan" srcnodeid="2" srcpinname="Y Output Value">
-   </LINK>
-   <LINK dstnodeid="13" dstpinname="Node ID" srcnodeid="3" srcpinname="X Output Value">
+   <LINK dstnodeid="13" dstpinname="doRescan" srcnodeid="2" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="Hidden" id="1" nodename="Change (Animation)">
    <BOUNDS height="0" left="6135" top="5580" type="Node" width="0">
@@ -188,9 +188,9 @@
    <PIN pinname="OnChange" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="1" dstpinname="Input" srcnodeid="12" srcpinname="Ord Value">
+   <LINK dstnodeid="1" dstpinname="Input" srcnodeid="11" srcpinname="Ord Value">
    </LINK>
-   <LINK dstnodeid="13" dstpinname="Create Node" srcnodeid="1" srcpinname="OnChange">
+   <LINK dstnodeid="12" dstpinname="Create Node" srcnodeid="1" srcpinname="OnChange">
    </LINK>
    <NODE componentmode="InABox" id="0" nodename="IOBox (String)">
    <BOUNDS height="0" left="5355" top="3780" type="Node" width="0">
@@ -204,6 +204,8 @@
    <PIN pinname="Output String" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="13" dstpinname="Parent Patch" srcnodeid="0" srcpinname="Output String">
+   <LINK dstnodeid="12" dstpinname="Parent Patch" srcnodeid="0" srcpinname="Output String">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="12" dstpinname="Node ID">
    </LINK>
    </PATCH>

@@ -526,7 +526,7 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="InAWindow" id="1" nodename="3dPreview.v4p" path="Y:\vvvv33_trunk\tools\AEC_FacadeFramework\">
+   <NODE componentmode="Hidden" id="1" nodename="3dPreview.v4p" path="Y:\vvvv33_trunk\tools\AEC_FacadeFramework\">
    <BOUNDS height="0" left="4470" top="5220" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="3600" left="4470" top="5220" type="Box" width="4800">
