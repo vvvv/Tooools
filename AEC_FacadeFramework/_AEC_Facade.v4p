@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv40beta21.dtd" >
-   <PATCH nodename="Y:\vvvv33_trunk\tools\AEC_FacadeFramework\_AEC_Facade.v4p" componentmode="InAWindow" locked="1">
+   <PATCH nodename="Y:\vvvv33_trunk\tools\AEC_FacadeFramework\_AEC_Facade.v4p" componentmode="InAWindow" locked="0">
    <BOUNDS height="6165" left="0" top="4260" type="Window" width="10275">
    </BOUNDS>
    <NODE componentmode="Hidden" hiddenwhenlocked="1" id="23" nodename="FacadeSetup.v4p" path="Y:\vvvv33_trunk\tools\AEC_FacadeFramework\">
@@ -388,7 +388,7 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="1" nodename="IOBox (String)">
+   <NODE componentmode="InABox" id="2" nodename="IOBox (String)">
    <BOUNDS height="270" left="5445" top="4110" type="Node" width="1860">
    </BOUNDS>
    <BOUNDS height="270" left="5445" top="4110" type="Box" width="1860">
@@ -402,7 +402,7 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="0" nodename="IOBox (String)">
+   <NODE componentmode="InABox" id="1" nodename="IOBox (String)">
    <BOUNDS height="0" left="2040" top="4665" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="375" left="2040" top="4665" type="Box" width="8010">
@@ -420,7 +420,7 @@
    <BOUNDS height="3840" left="0" top="450" type="Window" width="15360">
    </BOUNDS>
    </NODE>
-   <NODE componentmode="Hidden" hiddenwhenlocked="0" id="2" nodename="contents\_Template.v4p" path="Y:\vvvv33_trunk\tools\AEC_FacadeFramework\contents\">
+   <NODE componentmode="Hidden" hiddenwhenlocked="0" id="0" nodename="contents\_Template.v4p" path="Y:\vvvv33_trunk\tools\AEC_FacadeFramework\contents\">
    <BOUNDS height="270" left="2040" top="4095" type="Node" width="2025">
    </BOUNDS>
    <BOUNDS height="3600" left="2040" top="4095" type="Box" width="4800">
@@ -444,18 +444,18 @@
    <PIN pinname="Clear Backbuffer" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="7" dstpinname="Target Node ID" hiddenwhenlocked="1" srcnodeid="2" srcpinname="ID">
+   <LINK dstnodeid="7" dstpinname="Target Node ID" hiddenwhenlocked="1" srcnodeid="0" srcpinname="ID">
    </LINK>
-   <LINK dstnodeid="23" dstpinname="Content" hiddenwhenlocked="1" srcnodeid="2" srcpinname="Layer Out">
+   <LINK dstnodeid="23" dstpinname="Content" hiddenwhenlocked="1" srcnodeid="0" srcpinname="Layer Out">
    </LINK>
-   <LINK dstnodeid="23" dstpinname="Coordinates" hiddenwhenlocked="1" srcnodeid="2" srcpinname="Coordinates">
+   <LINK dstnodeid="23" dstpinname="Coordinates" hiddenwhenlocked="1" srcnodeid="0" srcpinname="Coordinates">
    </LINK>
-   <LINK dstnodeid="23" dstpinname="Light IDs" hiddenwhenlocked="1" srcnodeid="2" srcpinname="Light IDs">
+   <LINK dstnodeid="23" dstpinname="Light IDs" hiddenwhenlocked="1" srcnodeid="0" srcpinname="Light IDs">
    </LINK>
-   <LINK dstnodeid="23" dstpinname="Window Size" hiddenwhenlocked="1" srcnodeid="2" srcpinname="Window Size">
+   <LINK dstnodeid="23" dstpinname="Window Size" hiddenwhenlocked="1" srcnodeid="0" srcpinname="Window Size">
    </LINK>
-   <LINK dstnodeid="0" dstpinname="Input String" hiddenwhenlocked="1" srcnodeid="2" srcpinname="Credits">
+   <LINK dstnodeid="1" dstpinname="Input String" hiddenwhenlocked="1" srcnodeid="0" srcpinname="Credits">
    </LINK>
-   <LINK dstnodeid="23" dstpinname="Clear Backbuffer" hiddenwhenlocked="1" srcnodeid="2" srcpinname="Clear Backbuffer">
+   <LINK dstnodeid="23" dstpinname="Clear Backbuffer" hiddenwhenlocked="1" srcnodeid="0" srcpinname="Clear Backbuffer">
    </LINK>
    </PATCH>
