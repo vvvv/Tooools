@@ -1,0 +1,139 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv40beta21.dtd" >
+   <PATCH nodename="C:\vvvv\patches\VJ Patch Switcher\work\Post FX\invert\_root_invert.v4p">
+   <BOUNDS height="11865" left="45" top="840" type="Window" width="12900">
+   </BOUNDS>
+   <NODE componentmode="InABox" id="13" nodename="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="5940" top="330" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="160" left="6390" top="3975" type="Window" width="215">
+   </BOUNDS>
+   <BOUNDS height="240" left="5940" top="330" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Control">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="10" nodename="Scale (Transform Vector)">
+   <BOUNDS height="0" left="1470" top="3015" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="XYZ" slicecount="3" values="2,2,2">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="8" nodename="IOBox (Node)">
+   <BOUNDS height="0" left="1680" top="4995" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="1680" top="4995" type="Box" width="795">
+   </BOUNDS>
+   <BOUNDS height="160" left="6450" top="14490" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Layer Out|">
+   </PIN>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="7" nodename="Invert.fx">
+   <BOUNDS height="0" left="1680" top="4410" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <BOUNDS height="6000" left="1680" top="4410" type="Box" width="6000">
+   </BOUNDS>
+   <BOUNDS height="12000" left="6270" top="5550" type="Window" width="12000">
+   </BOUNDS>
+   <PIN pinname="Mesh" visible="1">
+   </PIN>
+   <PIN pinname="fade" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="7" dstpinname="Transform" srcnodeid="10" srcpinname="Transform Out">
+   </LINK>
+   <LINK dstnodeid="8" dstpinname="Input Node" srcnodeid="7" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="Hidden" id="6" nodename="Grid (EX9.Geometry)">
+   <BOUNDS height="0" left="810" top="3030" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Mesh" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="7" dstpinname="Mesh" srcnodeid="6" srcpinname="Mesh">
+   </LINK>
+   <NODE componentmode="Hidden" id="5" nodename="GetSlice (Spreads)">
+   <BOUNDS height="0" left="5700" top="1860" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="5" dstpinname="Input" srcnodeid="13" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="7" dstpinname="fade" srcnodeid="5" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="InABox" id="3" nodename="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="7245" top="270" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="7245" top="270" type="Box" width="795">
+   </BOUNDS>
+   <BOUNDS height="160" left="15630" top="11295" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Audio Analysis|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="2" nodename="IOBox (String)">
+   <BOUNDS height="0" left="8085" top="5160" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="1800" left="8085" top="5160" type="Box" width="1665">
+   </BOUNDS>
+   <BOUNDS height="160" left="8085" top="13725" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="8">
+   </PIN>
+   <PIN pinname="Show SliceIndex" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Input String" slicecount="8" visible="1" values="Fade,|Controller 1|,|Controller 2|,|Controller 3|,|Controller 4|,|Controller 5|,|Controller 6|,|Controller 7|">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="1" nodename="IOBox (String)">
+   <BOUNDS height="0" left="7335" top="7470" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="7335" top="7470" type="Box" width="795">
+   </BOUNDS>
+   <BOUNDS height="160" left="8325" top="15150" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Controller Names|">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="1" dstpinname="Input String" srcnodeid="2" srcpinname="Output String">
+   </LINK>
+   <NODE componentmode="InABox" id="14" nodename="IOBox (Node)">
+   <BOUNDS height="0" left="2175" top="1260" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="2175" top="1260" type="Box" width="795">
+   </BOUNDS>
+   <BOUNDS height="160" left="6330" top="8325" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Texture">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="14" srcpinname="Output Node" dstnodeid="7" dstpinname="Texture">
+   </LINK>
+   </PATCH>
