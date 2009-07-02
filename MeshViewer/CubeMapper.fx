@@ -8,30 +8,25 @@
 // --------------------------------------------------------------------------------------------------
 // PARAMETERS:
 // --------------------------------------------------------------------------------------------------
+#include "CubeMapper.fxh"
 
 //transforms
 float4x4 tW: WORLD;        //the models world matrix
+float4x4 tWIT: WORLDINVERSETRANSPOSE;
 float4x4 tV: VIEW;         //view matrix as set via Renderer (EX9)
 float4x4 tP: PROJECTION;   //projection matrix as set via Renderer (EX9)
 float4x4 tWVP: WORLDVIEWPROJECTION;
 float4x4 tWV: WORLDVIEW;
 float4x4 tVP: VIEWPROJECTION;
 float3 posCam : CAMERAPOSITION;
+float4x4 tLight;
+float4x4 tLightIT;
 
 //textures
-texture TexSky <string uiname="Sky CubeMap";>;
-samplerCUBE SampSky = sampler_state    //sampler for doing the texture-lookup
+texture TexEnvironment <string uiname="Environment CubeMap";>;
+samplerCUBE SampEnvironment = sampler_state    //sampler for doing the texture-lookup
 {
-    Texture   = (TexSky);       //apply a texture to the sampler
-    MipFilter = LINEAR;         //sampler states
-    MinFilter = LINEAR;
-    MagFilter = LINEAR;
-};
-
-texture TexReflect <string uiname="Reflection CubeMap";>;
-samplerCUBE SampReflect = sampler_state    //sampler for doing the texture-lookup
-{
-    Texture   = (TexReflect);   //apply a texture to the sampler
+    Texture   = (TexEnvironment);       //apply a texture to the sampler
     MipFilter = LINEAR;         //sampler states
     MinFilter = LINEAR;
     MagFilter = LINEAR;
@@ -45,18 +40,6 @@ samplerCUBE SampRefract = sampler_state    //sampler for doing the texture-looku
     MinFilter = LINEAR;
     MagFilter = LINEAR;
 };
-
-texture TexDiffuse <string uiname="Diffuse CubeMap";>;
-samplerCUBE SampDiffuse = sampler_state    //sampler for doing the texture-lookup
-{
-    Texture   = (TexDiffuse);   //apply a texture to the sampler
-    MipFilter = LINEAR;         //sampler states
-    MinFilter = LINEAR;
-    MagFilter = LINEAR;
-};
-
-float MaxReflectiveness = 1;
-float3 ETAs;
 
 //texture transformation marked with semantic TEXTUREMATRIX to achieve symmetric transformations
 float4x4 tTex: TEXTUREMATRIX <string uiname="Texture Transform";>;
@@ -77,6 +60,9 @@ struct vs2ps
     float4 ViewVectorV: TEXCOORD1;
     float3 NormW: TEXCOORD2;
     float4 NormV: TEXCOORD3;
+    float3 ViewVectorL: TEXCOORD4;
+    float3 PosL: TEXCOORD5;
+    float3 NormalL: TEXCOORD6;
 };
 
 // --------------------------------------------------------------------------------------------------
@@ -102,10 +88,10 @@ vs2ps_SkyBox VS_SkyBox(
 
 vs2ps VS_Reflect(
     float4 PosO: POSITION,
-    float4 NormO: NORMAL)
+    float4 NormalO: NORMAL)
 {
     //declare output struct
-    vs2ps Out;
+    vs2ps Out = (vs2ps) 0;
 
     //position in world space
     float4 PosW = mul(PosO, tW);
@@ -115,45 +101,30 @@ vs2ps VS_Reflect(
     Out.ViewVectorV = -normalize(mul(PosO, tWV));
     
     //normal in view space
-    Out.NormV = normalize(mul(NormO, tWV));
+    Out.NormV = normalize(mul(NormalO, tWV));
     
     //normal in world space
     //make sure NormO.w = 0, else we get artefacts when scaling the model
-    NormO.w = 0;
+    NormalO.w = 0;
     //the normal is a directional vector and therefore should have length=1
-    Out.NormW = normalize(mul(NormO, tW));
-    Out.NormV = normalize(mul(NormO, tWV));
+    Out.NormW = normalize(mul(NormalO, tW));
+    Out.NormV = normalize(mul(NormalO, tWV));
     
     //position in projection space
     Out.PosWVP = mul(PosW, tVP);
+    
+    //localized ibl
+    float4 nw = mul(NormalO, tWIT);
+    Out.NormalL = mul(nw, tLightIT);
+
+    float4 posL = mul(PosW, tLight);
+    Out.PosL = posL.xyz;
+
+    float4 camPosL = mul(float4(posCam, 1), tLight);
+    Out.ViewVectorL = camPosL - posL;
 
     return Out;
 }
-
-float4 SkyBoxColor(float3 ViewVectorW)
-{
-    return texCUBE(SampSky, ViewVectorW);
-}
-
-float4 ReflectiveColor(float3 ViewVectorW, float3 NormalW)
-{
-    return texCUBE(SampReflect, reflect(ViewVectorW, NormalW));
-}
-
-float4 RefractiveColor(float3 ViewVectorW, float3 NormalW, float3 ETA)
-{
-    float r = texCUBE(SampRefract, refract(ViewVectorW, NormalW, ETA.x)).r;
-    float g = texCUBE(SampRefract, refract(ViewVectorW, NormalW, ETA.y)).g;
-    float b = texCUBE(SampRefract, refract(ViewVectorW, NormalW, ETA.z)).b;
-
-    return float4(r, g, b, 1);
-}
-
-float4 ImageBasedDiffuseColor(float3 NormalW)
-{
-    return texCUBE(SampDiffuse, NormalW);
-}
-
 
 // --------------------------------------------------------------------------------------------------
 // PIXELSHADERS:
@@ -161,35 +132,57 @@ float4 ImageBasedDiffuseColor(float3 NormalW)
 
 float4 PS_SkyBox(vs2ps In): COLOR
 {
-    float4 col = texCUBE(SampSky, In.ViewVectorW);
+    float4 col = texCUBE(SampEnvironment, In.ViewVectorW);
     return col;
-}
-
-// approximate Fresnel function
-float fresnel(float NdotV, float bias, float power)
-{
-   return bias + (1.0-bias)*pow(1.0 - max(NdotV, 0), power);
 }
 
 float4 PS_Reflect(vs2ps In): COLOR
 {
     //reflective color
-    float4 cReflect = ReflectiveColor(In.ViewVectorW, In.NormW);
+    float4 cReflect = ReflectiveColor(SampEnvironment, In.ViewVectorW, In.NormW);
     //scale reflection to maximum reflectiveness
     cReflect.rgb *= MaxReflectiveness;
     
     return cReflect;
 }
 
+
+
+float4 PS_ReflectLocalized(vs2ps In): COLOR
+{
+    //reflective color
+    float3 Vu = normalize(In.ViewVectorL);
+    float3 Nu = normalize(In.NormalL);
+    float3 reflVect = normalize(reflect(Vu, Nu));
+
+   /* float b = -2.0 * dot(reflVect, In.PosL);
+    float c = dot(In.PosL, In.PosL) - 1.0;
+    float discrim = b*b - 4.0*c;
+         */
+    bool hasIntersects = true;
+    float4 reflColor = float4(1, 0, 0, 1);
+  /*  if (discrim < 0)
+    {
+       hasIntersects = ((abs(sqrt(discrim) - b) / 2.0) > 0.00001);
+    }      */
+    if (hasIntersects)
+    {
+       reflVect = 1000*reflVect - In.PosL;
+       //reflVect.y *= -1;
+       reflColor = texCUBE(SampEnvironment, -reflVect);
+    }
+    return reflColor;
+}
+
 float4 PS_ReflectRefract(vs2ps In): COLOR
 {
     //reflective color
-    float4 cReflect = ReflectiveColor(In.ViewVectorW, In.NormW);
+    float4 cReflect = ReflectiveColor(SampEnvironment, In.ViewVectorW, In.NormW);
     //scale reflection to maximum reflectiveness
     cReflect.rgb *= MaxReflectiveness;
 
     //refractive color
-    float4 cRefract = RefractiveColor(In.ViewVectorW, In.NormW, ETAs);
+    float4 cRefract = RefractiveColor(SampRefract, In.ViewVectorW, In.NormW, ETAs);
 
     //blend reflection and refraction via fresnel term
     float f = fresnel(1+dot(normalize(In.ViewVectorW), In.NormW), 0.1, 5);
@@ -202,7 +195,7 @@ float4 PS_ReflectRefract(vs2ps In): COLOR
 float4 PS_Diffuse(vs2ps In): COLOR
 {
     //diffuse environment color
-    float4 cDiffuse = ImageBasedDiffuseColor(In.NormW);
+    float4 cDiffuse = ImageBasedDiffuseColor(SampEnvironment, In.NormW);
     return cDiffuse;
 }
 
@@ -214,7 +207,6 @@ technique TSkyBox
 {
     pass P0
     {
-        //Wrap0 = U;  // useful when mesh is round like a sphere
         VertexShader = compile vs_1_0 VS_SkyBox();
         PixelShader  = compile ps_1_0 PS_SkyBox();
     }
@@ -224,9 +216,17 @@ technique TReflect
 {
     pass P0
     {
-        //Wrap0 = U;  // useful when mesh is round like a sphere
         VertexShader = compile vs_1_1 VS_Reflect();
         PixelShader  = compile ps_2_0 PS_Reflect();
+    }
+}
+
+technique TReflectLocalized
+{
+    pass P0
+    {
+        VertexShader = compile vs_1_1 VS_Reflect();
+        PixelShader  = compile ps_2_0 PS_ReflectLocalized();
     }
 }
 
@@ -234,7 +234,6 @@ technique TReflectRefract
 {
     pass P0
     {
-        //Wrap0 = U;  // useful when mesh is round like a sphere
         VertexShader = compile vs_1_1 VS_Reflect();
         PixelShader  = compile ps_2_0 PS_ReflectRefract();
     }
@@ -244,7 +243,6 @@ technique TDiffuseLight
 {
     pass P0
     {
-        //Wrap0 = U;  // useful when mesh is round like a sphere
         VertexShader = compile vs_1_1 VS_Reflect();
         PixelShader  = compile ps_2_0 PS_Diffuse();
     }

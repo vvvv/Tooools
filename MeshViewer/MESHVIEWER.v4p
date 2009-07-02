@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv40alpha21.1.dtd" >
-   <PATCH nodename="C:\Users\joreg\dev\vvvv_trunk\tools\MeshViewer\MESHVIEWER.v4p" locked="1">
-   <BOUNDS height="5340" left="1500" top="8160" type="Window" width="9840">
+   <PATCH nodename="Y:\vvvv_trunk\tools\MeshViewer\MESHVIEWER.v4p" locked="1">
+   <BOUNDS height="5040" left="1500" top="8160" type="Window" width="9840">
    </BOUNDS>
    <NODE componentmode="InAWindow" hiddenwhenlocked="0" id="54" nodename="Renderer (EX9)">
    <BOUNDS height="0" left="6480" top="8355" type="Node" width="0">
@@ -50,7 +50,7 @@
    <PIN pinname="Far Plane" slicecount="1" values="1000">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="52" nodename="xViewer.v4p" path="C:\Users\joreg\dev\vvvv_trunk\tools\MeshViewer\">
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="52" nodename="xViewer.v4p" path="Y:\vvvv_trunk\tools\MeshViewer\">
    <BOUNDS height="100" left="2385" top="1410" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="17025" left="10425" top="300" type="Window" width="17955">
@@ -100,6 +100,8 @@
    <PIN pinname="Environment Map" visible="1">
    </PIN>
    <PIN pinname="Reflect Environment" visible="1">
+   </PIN>
+   <PIN pinname="Technique" visible="1">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="51" nodename="IOBox (Value Advanced)">
@@ -799,6 +801,8 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Skybox">
    </PIN>
+   <PIN pinname="Environment CubeMap" visible="1">
+   </PIN>
    </NODE>
    <NODE componentmode="Hidden" hiddenwhenlocked="1" id="8" nodename="Box (EX9.Geometry)">
    <BOUNDS height="0" left="1500" top="5040" type="Node" width="0">
@@ -871,7 +875,7 @@
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Show Value" slicecount="1" values="0">
    </PIN>
@@ -883,7 +887,7 @@
    </PIN>
    <PIN pinname="Slider Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
+   <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="2" nodename="IOBox (String)">
@@ -905,15 +909,15 @@
    <LINK dstnodeid="52" dstpinname="Environment Map" hiddenwhenlocked="1" srcnodeid="5" srcpinname="Output String">
    </LINK>
    <NODE componentmode="InABox" id="1" nodename="IOBox (Value Advanced)">
-   <BOUNDS height="0" left="4830" top="3555" type="Node" width="0">
+   <BOUNDS height="0" left="4830" top="3765" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="160" left="10320" top="10020" type="Window" width="215">
    </BOUNDS>
-   <BOUNDS height="255" left="4830" top="3555" type="Box" width="450">
+   <BOUNDS height="255" left="4830" top="3765" type="Box" width="450">
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Show Value" slicecount="1" values="0">
    </PIN>
@@ -925,17 +929,17 @@
    </PIN>
    <PIN pinname="Slider Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
+   <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="0" nodename="IOBox (String)">
-   <BOUNDS height="270" left="5295" top="3570" type="Node" width="1215">
+   <BOUNDS height="270" left="5295" top="3780" type="Node" width="1215">
    </BOUNDS>
-   <BOUNDS height="255" left="5295" top="3570" type="Box" width="1500">
+   <BOUNDS height="480" left="5295" top="3780" type="Box" width="1290">
    </BOUNDS>
    <BOUNDS height="160" left="4050" top="1335" type="Window" width="215">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|reflect environment|">
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|use environment on mesh|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -943,5 +947,49 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="52" dstpinname="Reflect Environment" hiddenwhenlocked="1" srcnodeid="1" srcpinname="Y Output Value">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="55">
+   <BOUNDS type="Node" left="300" top="3720" width="1785" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="300" top="3720" width="975" height="495">
+   </BOUNDS>
+   <BOUNDS type="Window" left="0" top="0" width="215" height="160">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|environment technique|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="57">
+   <BOUNDS type="Node" left="1305" top="3765" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1305" top="3765" width="885" height="240">
+   </BOUNDS>
+   <BOUNDS type="Window" left="7485" top="13755" width="215" height="160">
+   </BOUNDS>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
+   <PIN pinname="Input Enum" slicecount="1" values="| TDiffuseLight|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="57" srcpinname="Output Enum" dstnodeid="52" dstpinname="Technique" hiddenwhenlocked="1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="58">
+   <BOUNDS type="Node" left="2250" top="3750" width="2430" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2250" top="3750" width="2430" height="270">
+   </BOUNDS>
+   <BOUNDS type="Window" left="0" top="0" width="215" height="160">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|choose TReflect or TDiffuseLight|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Texture Out" dstnodeid="9" dstpinname="Environment CubeMap">
    </LINK>
    </PATCH>
