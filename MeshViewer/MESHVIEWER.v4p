@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv40alpha21.1.dtd" >
-   <PATCH nodename="Y:\vvvv_trunk\tools\MeshViewer\MESHVIEWER.v4p" locked="1">
+   <PATCH nodename="C:\Users\joreg\dev\vvvv_trunk\tools\MeshViewer\MESHVIEWER.v4p" locked="1">
    <BOUNDS height="5370" left="1500" top="8160" type="Window" width="9840">
    </BOUNDS>
    <NODE componentmode="InAWindow" hiddenwhenlocked="0" id="57" nodename="Renderer (EX9)">
@@ -30,7 +30,7 @@
    <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="D24X8">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="56" nodename=":MODULES:\vvvv group\Transform\Camera (Transform Softimage).v4p" path="C:\Users\joreg\dev\vvvv_trunk\modules\vvvv group\Transform\">
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="56" nodename=":MODULES:\vvvv group\Transform\Camera (Transform Softimage).v4p" path="C:\Users\joreg\work\t_gallery\vvvv\modules\vvvv group\Transform\">
    <BOUNDS height="0" left="7440" top="5685" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="6000" left="13890" top="7665" type="Window" width="9000">
@@ -50,7 +50,7 @@
    <PIN pinname="Far Plane" slicecount="1" values="1000">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="55" nodename="xViewer.v4p" path="Y:\vvvv_trunk\tools\MeshViewer\">
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="55" nodename="xViewer.v4p" path="C:\Users\joreg\dev\vvvv_trunk\tools\MeshViewer\">
    <BOUNDS height="100" left="2385" top="1410" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="17025" left="10425" top="300" type="Window" width="17955">
@@ -843,7 +843,7 @@
    </BOUNDS>
    <BOUNDS height="255" left="1305" top="3255" type="Box" width="3480">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="Y:\vvvv_trunk\tools\MeshViewer\CubeMapReference.dds">
+   <PIN pinname="Input String" slicecount="1" visible="1" values="CubeMapReference.dds">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -969,7 +969,7 @@
    </BOUNDS>
    <PIN pinname="Output Enum" visible="1">
    </PIN>
-   <PIN pinname="Input Enum" slicecount="1" values="| TDiffuseLight|">
+   <PIN pinname="Input Enum" slicecount="1" values="| TReflect|">
    </PIN>
    </NODE>
    <LINK dstnodeid="55" dstpinname="Technique" hiddenwhenlocked="1" srcnodeid="1" srcpinname="Output Enum">
