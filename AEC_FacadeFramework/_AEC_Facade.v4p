@@ -1,8 +1,8 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv40beta21.dtd" >
-   <PATCH nodename="C:\temp\vvvv\AEC_FacadeFramework\_AEC_Facade.v4p" componentmode="InAWindow" locked="1">
+   <PATCH nodename="Y:\vvvv33_trunk\tools\AEC_FacadeFramework\_AEC_Facade.v4p" componentmode="InAWindow" locked="1">
    <BOUNDS height="5505" left="0" top="4260" type="Window" width="10275">
    </BOUNDS>
-   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="23" nodename="FacadeSetup.v4p" path="C:\temp\vvvv\AEC_FacadeFramework\">
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="23" nodename="FacadeSetup.v4p" path="Y:\vvvv33_trunk\tools\AEC_FacadeFramework\">
    <BOUNDS height="270" left="3675" top="5475" type="Node" width="1830">
    </BOUNDS>
    <BOUNDS height="3600" left="3675" top="5475" type="Box" width="4800">
@@ -301,12 +301,10 @@
    </PIN>
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Input Enum" slicecount="1" values="_Johannes_Eichberger">
-   </PIN>
    </NODE>
    <LINK dstnodeid="9" dstpinname="Receive" hiddenwhenlocked="1" srcnodeid="8" srcpinname="Output Enum">
    </LINK>
-   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="7" nodename="ContentSelektor.v4p" path="C:\temp\vvvv\AEC_FacadeFramework\">
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="7" nodename="ContentSelektor.v4p" path="Y:\vvvv33_trunk\tools\AEC_FacadeFramework\">
    <BOUNDS height="100" left="1215" top="6735" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="3600" left="1215" top="6735" type="Box" width="4800">
@@ -420,7 +418,7 @@
    <BOUNDS height="3840" left="0" top="450" type="Window" width="15360">
    </BOUNDS>
    </NODE>
-   <NODE componentmode="Hidden" hiddenwhenlocked="0" id="0" nodename="contents\Johannes Eichberger\_Johannes_Eichberger.v4p" path="C:\temp\vvvv\AEC_FacadeFramework\contents\Johannes Eichberger\">
+   <NODE componentmode="Hidden" hiddenwhenlocked="0" id="0" nodename="contents\_Template\_Template.v4p" path="Y:\vvvv33_trunk\tools\AEC_FacadeFramework\contents\_Template\">
    <BOUNDS height="270" left="2040" top="4095" type="Node" width="2025">
    </BOUNDS>
    <BOUNDS height="3600" left="2040" top="4095" type="Box" width="4800">
@@ -446,16 +444,16 @@
    </NODE>
    <LINK dstnodeid="7" dstpinname="Target Node ID" hiddenwhenlocked="1" srcnodeid="0" srcpinname="ID">
    </LINK>
-   <LINK dstnodeid="23" dstpinname="Content" hiddenwhenlocked="1" srcnodeid="0" srcpinname="Layer Out">
+   <LINK srcnodeid="0" srcpinname="Window Size" dstnodeid="23" dstpinname="Window Size" hiddenwhenlocked="1">
    </LINK>
-   <LINK dstnodeid="23" dstpinname="Clear Backbuffer" hiddenwhenlocked="1" srcnodeid="0" srcpinname="Clear Backbuffer">
+   <LINK srcnodeid="0" srcpinname="Light IDs" dstnodeid="23" dstpinname="Light IDs" hiddenwhenlocked="1">
    </LINK>
-   <LINK dstnodeid="1" dstpinname="Input String" hiddenwhenlocked="1" srcnodeid="0" srcpinname="Credits">
+   <LINK srcnodeid="0" srcpinname="Coordinates" dstnodeid="23" dstpinname="Coordinates" hiddenwhenlocked="1">
    </LINK>
-   <LINK dstnodeid="23" dstpinname="Coordinates" hiddenwhenlocked="1" srcnodeid="0" srcpinname="Coordinates">
+   <LINK srcnodeid="0" srcpinname="Credits" dstnodeid="1" dstpinname="Input String" hiddenwhenlocked="1">
    </LINK>
-   <LINK dstnodeid="23" dstpinname="Light IDs" hiddenwhenlocked="1" srcnodeid="0" srcpinname="Light IDs">
+   <LINK srcnodeid="0" srcpinname="Clear Backbuffer" dstnodeid="23" dstpinname="Clear Backbuffer" hiddenwhenlocked="1">
    </LINK>
-   <LINK dstnodeid="23" dstpinname="Window Size" hiddenwhenlocked="1" srcnodeid="0" srcpinname="Window Size">
+   <LINK srcnodeid="0" srcpinname="Layer Out" dstnodeid="23" dstpinname="Content" hiddenwhenlocked="1">
    </LINK>
    </PATCH>

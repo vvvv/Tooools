@@ -2,7 +2,7 @@
    <PATCH nodename="E:\jobs\2009\hagenberg\aec-fassade\joregs\vvvv_AEC_Facade\contents\DefaultMapping.v4p">
    <BOUNDS height="12990" left="10455" top="6300" type="Window" width="18105">
    </BOUNDS>
-   <NODE componentmode="Hidden" id="54" nodename="..\SideMapper.v4p" path="E:\jobs\2009\hagenberg\aec-fassade\joregs\vvvv_AEC_Facade\">
+   <NODE componentmode="Hidden" id="54" nodename="SideMapper.v4p" path="E:\jobs\2009\hagenberg\aec-fassade\joregs\vvvv_AEC_Facade\">
    <BOUNDS height="270" left="3675" top="6300" type="Node" width="2715">
    </BOUNDS>
    <BOUNDS height="3600" left="3675" top="6300" type="Box" width="4800">
@@ -56,7 +56,7 @@
    </NODE>
    <LINK dstnodeid="54" dstpinname="Selected Lights" srcnodeid="53" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" id="52" nodename="..\SideMapper.v4p" path="E:\jobs\2009\hagenberg\aec-fassade\joregs\vvvv_AEC_Facade\">
+   <NODE componentmode="Hidden" id="52" nodename="SideMapper.v4p" path="E:\jobs\2009\hagenberg\aec-fassade\joregs\vvvv_AEC_Facade\">
    <BOUNDS height="270" left="840" top="6255" type="Node" width="2715">
    </BOUNDS>
    <BOUNDS height="3600" left="840" top="6255" type="Box" width="4800">
@@ -192,7 +192,7 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="46" nodename="..\SideMapper.v4p" path="E:\jobs\2009\hagenberg\aec-fassade\joregs\vvvv_AEC_Facade\">
+   <NODE componentmode="Hidden" id="46" nodename="SideMapper.v4p" path="E:\jobs\2009\hagenberg\aec-fassade\joregs\vvvv_AEC_Facade\">
    <BOUNDS height="270" left="9660" top="6255" type="Node" width="2700">
    </BOUNDS>
    <BOUNDS height="3600" left="9660" top="6255" type="Box" width="4800">
@@ -264,7 +264,7 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="43" nodename="..\SideMapper.v4p" path="E:\jobs\2009\hagenberg\aec-fassade\joregs\vvvv_AEC_Facade\">
+   <NODE componentmode="Hidden" id="43" nodename="SideMapper.v4p" path="E:\jobs\2009\hagenberg\aec-fassade\joregs\vvvv_AEC_Facade\">
    <BOUNDS height="270" left="6630" top="6255" type="Node" width="2715">
    </BOUNDS>
    <BOUNDS height="3600" left="6630" top="6255" type="Box" width="4800">
@@ -322,7 +322,7 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="41" nodename="..\SideMapper.v4p" path="E:\jobs\2009\hagenberg\aec-fassade\joregs\vvvv_AEC_Facade\">
+   <NODE componentmode="Hidden" id="41" nodename="SideMapper.v4p" path="E:\jobs\2009\hagenberg\aec-fassade\joregs\vvvv_AEC_Facade\">
    <BOUNDS height="270" left="1620" top="9150" type="Node" width="3195">
    </BOUNDS>
    <BOUNDS height="3600" left="1620" top="9150" type="Box" width="4800">
@@ -394,7 +394,7 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="38" nodename="..\SideMapper.v4p" path="E:\jobs\2009\hagenberg\aec-fassade\joregs\vvvv_AEC_Facade\">
+   <NODE componentmode="Hidden" id="38" nodename="SideMapper.v4p" path="E:\jobs\2009\hagenberg\aec-fassade\joregs\vvvv_AEC_Facade\">
    <BOUNDS height="270" left="15225" top="9750" type="Node" width="3615">
    </BOUNDS>
    <BOUNDS height="3600" left="15225" top="9750" type="Box" width="4800">
@@ -470,7 +470,7 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="35" nodename="..\SideMapper.v4p" path="E:\jobs\2009\hagenberg\aec-fassade\joregs\vvvv_AEC_Facade\">
+   <NODE componentmode="Hidden" id="35" nodename="SideMapper.v4p" path="E:\jobs\2009\hagenberg\aec-fassade\joregs\vvvv_AEC_Facade\">
    <BOUNDS height="270" left="13065" top="9750" type="Node" width="1680">
    </BOUNDS>
    <BOUNDS height="3600" left="13065" top="9750" type="Box" width="4800">
@@ -528,7 +528,7 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="33" nodename="..\SideMapper.v4p" path="E:\jobs\2009\hagenberg\aec-fassade\joregs\vvvv_AEC_Facade\">
+   <NODE componentmode="Hidden" id="33" nodename="SideMapper.v4p" path="E:\jobs\2009\hagenberg\aec-fassade\joregs\vvvv_AEC_Facade\">
    <BOUNDS height="270" left="9360" top="9750" type="Node" width="2700">
    </BOUNDS>
    <BOUNDS height="3600" left="9360" top="9750" type="Box" width="4800">
