@@ -1,8 +1,8 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv40beta21.dtd" >
-   <PATCH nodename="Y:\vvvv33_trunk\tools\AEC_FacadeFramework\_AEC_Facade.v4p" componentmode="InAWindow" locked="0">
-   <BOUNDS height="6165" left="0" top="4260" type="Window" width="10275">
+   <PATCH nodename="C:\temp\vvvv\AEC_FacadeFramework\_AEC_Facade.v4p" componentmode="InAWindow" locked="1">
+   <BOUNDS height="5505" left="0" top="4260" type="Window" width="10275">
    </BOUNDS>
-   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="23" nodename="FacadeSetup.v4p" path="Y:\vvvv33_trunk\tools\AEC_FacadeFramework\">
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="23" nodename="FacadeSetup.v4p" path="C:\temp\vvvv\AEC_FacadeFramework\">
    <BOUNDS height="270" left="3675" top="5475" type="Node" width="1830">
    </BOUNDS>
    <BOUNDS height="3600" left="3675" top="5475" type="Box" width="4800">
@@ -39,11 +39,11 @@
    <NODE componentmode="InABox" id="22" nodename="IOBox (String)">
    <BOUNDS height="270" left="1875" top="60" type="Node" width="1920">
    </BOUNDS>
-   <BOUNDS height="705" left="1875" top="60" type="Box" width="1755">
+   <BOUNDS height="945" left="1875" top="60" type="Box" width="1770">
    </BOUNDS>
    <BOUNDS height="160" left="0" top="0" type="Window" width="215">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt; rightclick to choose one of the available contents|">
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt; rightclick to choose one of the available contents (this may take a while)|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -255,19 +255,19 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="10" nodename="IOBox (String)">
    <BOUNDS height="270" left="5445" top="3030" type="Node" width="1380">
    </BOUNDS>
-   <BOUNDS height="285" left="5445" top="3030" type="Box" width="1380">
+   <BOUNDS height="495" left="5445" top="3030" type="Box" width="1410">
    </BOUNDS>
    <BOUNDS height="160" left="900" top="900" type="Window" width="215">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt; show content|">
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt; show content outside of facade|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -287,7 +287,7 @@
    <NODE componentmode="InABox" id="8" nodename="IOBox (Enumerations)">
    <BOUNDS height="0" left="0" top="15" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="5790" left="0" top="15" type="Box" width="1815">
+   <BOUNDS height="5025" left="0" top="15" type="Box" width="1770">
    </BOUNDS>
    <BOUNDS height="160" left="2580" top="6390" type="Window" width="215">
    </BOUNDS>
@@ -301,12 +301,12 @@
    </PIN>
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Input Enum" slicecount="1" values="_Template">
+   <PIN pinname="Input Enum" slicecount="1" values="_Johannes_Eichberger">
    </PIN>
    </NODE>
    <LINK dstnodeid="9" dstpinname="Receive" hiddenwhenlocked="1" srcnodeid="8" srcpinname="Output Enum">
    </LINK>
-   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="7" nodename="ContentSelektor.v4p" path="Y:\vvvv33_trunk\tools\AEC_FacadeFramework\">
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="7" nodename="ContentSelektor.v4p" path="C:\temp\vvvv\AEC_FacadeFramework\">
    <BOUNDS height="100" left="1215" top="6735" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="3600" left="1215" top="6735" type="Box" width="4800">
@@ -337,11 +337,11 @@
    <NODE componentmode="InABox" id="5" nodename="IOBox (String)">
    <BOUNDS height="270" left="7995" top="2100" type="Node" width="3000">
    </BOUNDS>
-   <BOUNDS height="1680" left="7995" top="2100" type="Box" width="1950">
+   <BOUNDS height="990" left="7995" top="2100" type="Box" width="1950">
    </BOUNDS>
    <BOUNDS height="160" left="0" top="0" type="Window" width="215">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|note:&cr;&lf;&cr;&lf;- requires vvvv &gt;= 40beta21 + addonpack 01&cr;&lf;&cr;&lf;- 3d preview is buggy (needs a fixed .x file)|">
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|note:&cr;&lf;&cr;&lf;- requires vvvv &gt;= 40beta21 + addonpack 01|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -349,9 +349,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="4" nodename="IOBox (Value Advanced)">
-   <BOUNDS height="0" left="1905" top="840" type="Node" width="0">
+   <BOUNDS height="0" left="1905" top="1485" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="480" left="1905" top="840" type="Box" width="480">
+   <BOUNDS height="480" left="1905" top="1485" type="Box" width="480">
    </BOUNDS>
    <BOUNDS height="160" left="2835" top="6840" type="Window" width="215">
    </BOUNDS>
@@ -375,9 +375,9 @@
    <LINK dstnodeid="7" dstpinname="Rescan" hiddenwhenlocked="1" srcnodeid="4" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="InABox" id="3" nodename="IOBox (String)">
-   <BOUNDS height="270" left="2415" top="945" type="Node" width="765">
+   <BOUNDS height="270" left="2415" top="1590" type="Node" width="765">
    </BOUNDS>
-   <BOUNDS height="270" left="2415" top="945" type="Box" width="765">
+   <BOUNDS height="270" left="2415" top="1590" type="Box" width="765">
    </BOUNDS>
    <BOUNDS height="160" left="0" top="0" type="Window" width="215">
    </BOUNDS>
@@ -420,7 +420,7 @@
    <BOUNDS height="3840" left="0" top="450" type="Window" width="15360">
    </BOUNDS>
    </NODE>
-   <NODE componentmode="Hidden" hiddenwhenlocked="0" id="0" nodename="contents\_Template.v4p" path="Y:\vvvv33_trunk\tools\AEC_FacadeFramework\contents\">
+   <NODE componentmode="Hidden" hiddenwhenlocked="0" id="0" nodename="contents\Johannes Eichberger\_Johannes_Eichberger.v4p" path="C:\temp\vvvv\AEC_FacadeFramework\contents\Johannes Eichberger\">
    <BOUNDS height="270" left="2040" top="4095" type="Node" width="2025">
    </BOUNDS>
    <BOUNDS height="3600" left="2040" top="4095" type="Box" width="4800">
@@ -448,14 +448,14 @@
    </LINK>
    <LINK dstnodeid="23" dstpinname="Content" hiddenwhenlocked="1" srcnodeid="0" srcpinname="Layer Out">
    </LINK>
+   <LINK dstnodeid="23" dstpinname="Clear Backbuffer" hiddenwhenlocked="1" srcnodeid="0" srcpinname="Clear Backbuffer">
+   </LINK>
+   <LINK dstnodeid="1" dstpinname="Input String" hiddenwhenlocked="1" srcnodeid="0" srcpinname="Credits">
+   </LINK>
    <LINK dstnodeid="23" dstpinname="Coordinates" hiddenwhenlocked="1" srcnodeid="0" srcpinname="Coordinates">
    </LINK>
    <LINK dstnodeid="23" dstpinname="Light IDs" hiddenwhenlocked="1" srcnodeid="0" srcpinname="Light IDs">
    </LINK>
    <LINK dstnodeid="23" dstpinname="Window Size" hiddenwhenlocked="1" srcnodeid="0" srcpinname="Window Size">
-   </LINK>
-   <LINK dstnodeid="1" dstpinname="Input String" hiddenwhenlocked="1" srcnodeid="0" srcpinname="Credits">
-   </LINK>
-   <LINK dstnodeid="23" dstpinname="Clear Backbuffer" hiddenwhenlocked="1" srcnodeid="0" srcpinname="Clear Backbuffer">
    </LINK>
    </PATCH>

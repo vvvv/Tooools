@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv40beta21.dtd" >
-   <PATCH nodename="Y:\vvvv33_trunk\tools\AEC_FacadeFramework\ContentSelektor.v4p">
+   <PATCH nodename="C:\temp\vvvv\AEC_FacadeFramework\ContentSelektor.v4p">
    <BOUNDS height="8505" left="14070" top="1920" type="Window" width="11070">
    </BOUNDS>
    <NODE componentmode="InABox" id="14" nodename="IOBox (Enumerations)">
@@ -26,6 +26,8 @@
    <PIN pinname="Mask" slicecount="1" values="*.v4p">
    </PIN>
    <PIN pinname="Filenames" visible="1">
+   </PIN>
+   <PIN pinname="Include Subdirectories" slicecount="1" values="1">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="12" nodename="CreateNode (VVVV)">
@@ -206,6 +208,6 @@
    </NODE>
    <LINK dstnodeid="12" dstpinname="Parent Patch" srcnodeid="0" srcpinname="Output String">
    </LINK>
-   <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="12" dstpinname="Node ID">
+   <LINK dstnodeid="12" dstpinname="Node ID" srcnodeid="3" srcpinname="Y Output Value">
    </LINK>
    </PATCH>

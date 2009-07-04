@@ -204,7 +204,7 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="|Window Size|">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="5" nodename="DefaultMapping.v4p" path="Y:\vvvv33_trunk\tools\AEC_FacadeFramework\contents\">
+   <NODE componentmode="Hidden" id="5" nodename="..\DefaultMapping.v4p" path="Y:\vvvv33_trunk\tools\AEC_FacadeFramework\contents\">
    <BOUNDS height="270" left="5055" top="7680" type="Node" width="2070">
    </BOUNDS>
    <BOUNDS height="3600" left="5055" top="7680" type="Box" width="4800">
