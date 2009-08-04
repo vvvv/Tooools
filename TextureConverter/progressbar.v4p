@@ -1,0 +1,239 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv40alpha16.1.dtd" >
+   <PATCH nodename="C:\Users\rainer\Documents\Zaragoza\TOOLS\convvvverterrrr\progressbar.v4p">
+   <BOUNDS height="11190" left="6075" top="3045" type="Window" width="11025">
+   </BOUNDS>
+   <NODE componentmode="InABox" id="8" nodename="Renderer (GDI)">
+   <BOUNDS height="0" left="1110" top="7050" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="5010" left="12885" top="12765" type="Window" width="6240">
+   </BOUNDS>
+   <BOUNDS height="435" left="1110" top="7050" type="Box" width="2160">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="7" nodename="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="2175" top="1065" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="160" left="12585" top="9885" type="Window" width="215">
+   </BOUNDS>
+   <BOUNDS height="240" left="2175" top="1065" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="23">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Total">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="6" nodename="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="1185" top="1050" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="160" left="12840" top="9735" type="Window" width="215">
+   </BOUNDS>
+   <BOUNDS height="240" left="1185" top="1050" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="12.56">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Current">
+   </PIN>
+   </NODE>
+   <NODE id="5" nodename="RoundRect (GDI)">
+   <BOUNDS height="270" left="1110" top="5865" type="Node" width="2055">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Pen Width" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Brush Style" slicecount="1" values="Solid">
+   </PIN>
+   <PIN pinname="Width" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Height" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Brush Color" slicecount="1" values="|0.63303,0.08606,0.08606,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="4" nodename="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="1500" top="3330" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="160" left="13680" top="9150" type="Window" width="215">
+   </BOUNDS>
+   <BOUNDS height="240" left="1500" top="3330" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="3" nodename="Divide (Value)">
+   <BOUNDS height="0" left="1080" top="4095" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Input 2" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="3" dstpinname="Input" srcnodeid="4" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="5" dstpinname="Width" srcnodeid="4" srcpinname="Y Output Value">
+   </LINK>
+   <NODE id="2" nodename="Add (Value)">
+   <BOUNDS height="0" left="1080" top="4755" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="2" dstpinname="Input 1" srcnodeid="3" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="5" dstpinname="X" srcnodeid="2" srcpinname="Output">
+   </LINK>
+   <NODE id="1" nodename="Map (Value)">
+   <BOUNDS height="0" left="2250" top="2595" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Destination Maximum" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Source Maximum" visible="1">
+   </PIN>
+   <PIN pinname="Mapping" slicecount="1" values="Clamp">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="1" dstpinname="Input" srcnodeid="6" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="1" dstpinname="Source Maximum" srcnodeid="7" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="4" dstpinname="Y Input Value" srcnodeid="1" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="InABox" id="0" nodename="IOBox (Node)">
+   <BOUNDS height="0" left="1140" top="7950" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="160" left="14175" top="13035" type="Window" width="215">
+   </BOUNDS>
+   <BOUNDS height="240" left="1140" top="7950" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Progress">
+   </PIN>
+   </NODE>
+   <NODE nodename="Group (GDI)" id="9">
+   <BOUNDS type="Node" left="1095" top="6435" width="2220" height="270">
+   </BOUNDS>
+   <PIN pinname="Layer 2" visible="1">
+   </PIN>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Layer Template Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="Text (GDI)" id="10">
+   <BOUNDS type="Node" left="3465" top="5940" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Text" slicecount="1" values="Progress">
+   </PIN>
+   <PIN pinname="X" slicecount="1" values="0.04">
+   </PIN>
+   <PIN pinname="HorizontalAlign" slicecount="1" values="Left">
+   </PIN>
+   <PIN pinname="Brush Color" slicecount="1" values="|0.95830,0.13028,0.57103,1.00000|">
+   </PIN>
+   <PIN pinname="Show Brush" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="ClipToRect" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Width" slicecount="1" values="2">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Layer" dstnodeid="8" dstpinname="Layers">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Layer" dstnodeid="9" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Layer" dstnodeid="9" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Layer" dstnodeid="0" dstpinname="Input Node">
+   </LINK>
+   <NODE nodename="Add (String)" id="12">
+   <BOUNDS type="Node" left="4560" top="3000" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse String" slicecount="1" values="|/ |">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="AsString (Value)" id="13">
+   <BOUNDS type="Node" left="4275" top="1995" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="SubType" slicecount="1" values="|Integer (0 .. MaxInt)|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="13" dstpinname="Input">
+   </LINK>
+   <NODE nodename="AsString (Value)" id="14">
+   <BOUNDS type="Node" left="5355" top="1965" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="SubType" slicecount="1" values="|Integer (0 .. MaxInt)|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="14" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="12" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="14" srcpinname="Output" dstnodeid="12" dstpinname="Input 2">
+   </LINK>
+   <NODE nodename="Text (GDI)" id="15">
+   <BOUNDS type="Node" left="3390" top="5415" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Text" visible="1">
+   </PIN>
+   <PIN pinname="X" slicecount="1" values="-0.04">
+   </PIN>
+   <PIN pinname="HorizontalAlign" slicecount="1" values="Right">
+   </PIN>
+   <PIN pinname="Brush Color" slicecount="1" values="|0.95830,0.13028,0.57103,1.00000|">
+   </PIN>
+   <PIN pinname="Show Brush" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="ClipToRect" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Width" slicecount="1" values="2">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="15" srcpinname="Layer" dstnodeid="9" dstpinname="Layer 3">
+   </LINK>
+   <LINK srcnodeid="12" srcpinname="Output" dstnodeid="15" dstpinname="Text">
+   </LINK>
+   </PATCH>
