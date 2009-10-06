@@ -1,13 +1,13 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv40beta21.dtd" >
-   <PATCH nodename="C:\Users\rainer\Desktop\TextureConverter\_textureConverter.v4p" bgcolor="15132390" locked="0">
-   <BOUNDS height="10725" left="6300" top="1590" type="Window" width="9900">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv40alpha21.3.dtd" >
+   <PATCH nodename="C:\Users\joreg\dev\vvvv_trunk\tools\TextureConverter\TEXTURECONVERTER.v4p" bgcolor="15132390" locked="1">
+   <BOUNDS height="10725" left="1650" top="915" type="Window" width="9900">
    </BOUNDS>
-   <NODE componentmode="InABox" hiddenwhenlocked="0" id="26" nodename="Renderer (EX9)">
-   <BOUNDS height="0" left="750" top="1815" type="Node" width="0">
+   <NODE componentmode="InABox" hiddenwhenlocked="0" id="27" nodename="Renderer (EX9)">
+   <BOUNDS height="0" left="750" top="2115" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="5010" left="15585" top="6645" type="Window" width="6240">
    </BOUNDS>
-   <BOUNDS height="3990" left="750" top="1815" type="Box" width="3870">
+   <BOUNDS height="3990" left="750" top="2115" type="Box" width="3870">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -20,12 +20,12 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="Source">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" hiddenwhenlocked="0" id="25" nodename="Renderer (EX9)">
-   <BOUNDS height="0" left="4680" top="1815" type="Node" width="0">
+   <NODE componentmode="InABox" hiddenwhenlocked="0" id="26" nodename="Renderer (EX9)">
+   <BOUNDS height="0" left="4680" top="2115" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="5010" left="10995" top="2610" type="Window" width="6240">
    </BOUNDS>
-   <BOUNDS height="3990" left="4680" top="1815" type="Box" width="3870">
+   <BOUNDS height="3990" left="4680" top="2115" type="Box" width="3870">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -38,7 +38,7 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="Target">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="24" nodename="IOBox (Enumerations)">
+   <NODE componentmode="InABox" id="25" nodename="IOBox (Enumerations)">
    <BOUNDS height="0" left="6630" top="165" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="160" left="9525" top="14850" type="Window" width="215">
@@ -54,7 +54,7 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="23" nodename="IOBox (Value Advanced)">
+   <NODE componentmode="InABox" id="24" nodename="IOBox (Value Advanced)">
    <BOUNDS height="0" left="7995" top="135" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="160" left="4130" top="6283" type="Window" width="215">
@@ -80,44 +80,44 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="22" nodename="Renderer (TTY)">
-   <BOUNDS height="0" left="750" top="6765" type="Node" width="0">
+   <NODE componentmode="InABox" id="23" nodename="Renderer (TTY)">
+   <BOUNDS height="0" left="750" top="7065" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="5010" left="18510" top="6195" type="Window" width="6240">
    </BOUNDS>
-   <BOUNDS height="900" left="750" top="6765" type="Box" width="7800">
+   <BOUNDS height="900" left="750" top="7065" type="Box" width="7800">
    </BOUNDS>
    </NODE>
-   <NODE componentmode="InABox" id="21" nodename="IOBox (String)">
-   <BOUNDS height="0" left="750" top="6390" type="Node" width="0">
+   <NODE componentmode="InABox" id="22" nodename="IOBox (String)">
+   <BOUNDS height="0" left="750" top="6690" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="160" left="10545" top="14340" type="Window" width="215">
    </BOUNDS>
-   <BOUNDS height="240" left="750" top="6390" type="Box" width="7800">
+   <BOUNDS height="240" left="750" top="6690" type="Box" width="7800">
    </BOUNDS>
    <PIN pinname="Input String" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="20" nodename="Renderer (GDI)">
-   <BOUNDS height="0" left="750" top="5850" type="Node" width="0">
+   <NODE componentmode="InABox" id="21" nodename="Renderer (GDI)">
+   <BOUNDS height="0" left="750" top="6150" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="5010" left="14100" top="12600" type="Window" width="6240">
    </BOUNDS>
-   <BOUNDS height="420" left="750" top="5850" type="Box" width="7800">
+   <BOUNDS height="420" left="750" top="6150" type="Box" width="7800">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
    <PIN pinname="Background Color" slicecount="1" values="|0.22519,0.22519,0.22519,1.00000|">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="19" nodename="converrrrt.v4p" path="C:\Users\rainer\Desktop\TextureConverter\">
-   <BOUNDS height="270" left="735" top="1455" type="Node" width="7815">
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="20" nodename="converrrrt.v4p" path="C:\Users\joreg\dev\vvvv_trunk\tools\TextureConverter\">
+   <BOUNDS height="270" left="735" top="1755" type="Node" width="7815">
    </BOUNDS>
-   <BOUNDS left="735" top="1455" type="Box">
+   <BOUNDS left="735" top="1755" type="Box">
    </BOUNDS>
    <PIN pinname="Processing..." visible="1">
    </PIN>
-   <BOUNDS height="14760" left="11580" top="915" type="Window" width="15180">
+   <BOUNDS height="17100" left="11580" top="915" type="Window" width="15345">
    </BOUNDS>
    <PIN pinname="Src" visible="1">
    </PIN>
@@ -147,34 +147,36 @@
    </PIN>
    <PIN pinname="Target Directory Suffix" visible="1">
    </PIN>
+   <PIN pinname="Maximum Texture Size" visible="1">
+   </PIN>
    </NODE>
-   <LINK dstnodeid="26" dstpinname="Layers" hiddenwhenlocked="1" srcnodeid="19" srcpinname="Src">
+   <LINK dstnodeid="27" dstpinname="Layers" hiddenwhenlocked="1" srcnodeid="20" srcpinname="Src">
    </LINK>
-   <LINK dstnodeid="25" dstpinname="Layers" hiddenwhenlocked="1" srcnodeid="19" srcpinname="Trgt">
+   <LINK dstnodeid="26" dstpinname="Layers" hiddenwhenlocked="1" srcnodeid="20" srcpinname="Trgt">
    </LINK>
-   <LINK dstnodeid="19" dstpinname="Process" hiddenwhenlocked="1" srcnodeid="23" srcpinname="Y Output Value">
+   <LINK dstnodeid="20" dstpinname="Process" hiddenwhenlocked="1" srcnodeid="24" srcpinname="Y Output Value">
    </LINK>
-   <LINK dstnodeid="21" dstpinname="Input String" hiddenwhenlocked="1" srcnodeid="19" srcpinname="Target Format">
+   <LINK dstnodeid="22" dstpinname="Input String" hiddenwhenlocked="1" srcnodeid="20" srcpinname="Target Format">
    </LINK>
-   <LINK dstnodeid="20" dstpinname="Layers" hiddenwhenlocked="1" srcnodeid="19" srcpinname="Progress">
+   <LINK dstnodeid="21" dstpinname="Layers" hiddenwhenlocked="1" srcnodeid="20" srcpinname="Progress">
    </LINK>
-   <NODE componentmode="InABox" id="18" nodename="IOBox (String)">
+   <NODE componentmode="InABox" id="19" nodename="IOBox (String)">
    <BOUNDS height="0" left="2040" top="165" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="160" left="6840" top="5760" type="Window" width="215">
    </BOUNDS>
    <BOUNDS height="285" left="2040" top="165" type="Box" width="2505">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="||">
+   <PIN pinname="Input String" slicecount="1" values="|C:\te mp|">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <LINK dstnodeid="19" dstpinname="Source Directory" hiddenwhenlocked="1" srcnodeid="18" srcpinname="Output String">
+   <LINK dstnodeid="20" dstpinname="Source Directory" hiddenwhenlocked="1" srcnodeid="19" srcpinname="Output String">
    </LINK>
-   <NODE componentmode="InABox" id="17" nodename="IOBox (Value Advanced)">
+   <NODE componentmode="InABox" id="18" nodename="IOBox (Value Advanced)">
    <BOUNDS height="0" left="7995" top="780" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="160" left="4430" top="6583" type="Window" width="215">
@@ -200,9 +202,9 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <LINK dstnodeid="19" dstpinname="Stop" hiddenwhenlocked="1" srcnodeid="17" srcpinname="Y Output Value">
+   <LINK dstnodeid="20" dstpinname="Stop" hiddenwhenlocked="1" srcnodeid="18" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="InABox" id="16" nodename="IOBox (String)">
+   <NODE componentmode="InABox" id="17" nodename="IOBox (String)">
    <BOUNDS height="270" left="525" top="165" type="Node" width="1485">
    </BOUNDS>
    <BOUNDS height="270" left="525" top="165" type="Box" width="1485">
@@ -216,7 +218,7 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="15" nodename="IOBox (String)">
+   <NODE componentmode="InABox" id="16" nodename="IOBox (String)">
    <BOUNDS height="0" left="2040" top="480" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="285" left="2040" top="480" type="Box" width="630">
@@ -225,12 +227,12 @@
    </BOUNDS>
    <PIN pinname="Output String" visible="1">
    </PIN>
-   <PIN pinname="Input String" slicecount="1" values="*.*">
+   <PIN pinname="Input String" slicecount="1" values="*.png">
    </PIN>
    </NODE>
-   <LINK dstnodeid="19" dstpinname="Source File Mask" hiddenwhenlocked="1" srcnodeid="15" srcpinname="Output String">
+   <LINK dstnodeid="20" dstpinname="Source File Mask" hiddenwhenlocked="1" srcnodeid="16" srcpinname="Output String">
    </LINK>
-   <NODE componentmode="InABox" id="14" nodename="IOBox (String)">
+   <NODE componentmode="InABox" id="15" nodename="IOBox (String)">
    <BOUNDS height="270" left="525" top="480" type="Node" width="1440">
    </BOUNDS>
    <BOUNDS height="270" left="525" top="480" type="Box" width="1440">
@@ -244,7 +246,7 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="13" nodename="IOBox (Value Advanced)">
+   <NODE componentmode="InABox" id="14" nodename="IOBox (Value Advanced)">
    <BOUNDS height="0" left="2040" top="810" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="285" left="2040" top="810" type="Box" width="480">
@@ -263,12 +265,12 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="12" nodename="IOBox (String)">
+   <NODE componentmode="InABox" id="13" nodename="IOBox (String)">
    <BOUNDS height="270" left="120" top="810" type="Node" width="1890">
    </BOUNDS>
    <BOUNDS height="270" left="120" top="810" type="Box" width="1890">
@@ -282,9 +284,9 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK dstnodeid="19" dstpinname="Include Subdirectories" hiddenwhenlocked="1" srcnodeid="13" srcpinname="Y Output Value">
+   <LINK dstnodeid="20" dstpinname="Include Subdirectories" hiddenwhenlocked="1" srcnodeid="14" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="InABox" id="11" nodename="IOBox (Value Advanced)">
+   <NODE componentmode="InABox" id="12" nodename="IOBox (Value Advanced)">
    <BOUNDS height="0" left="6630" top="780" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="240" left="6630" top="780" type="Box" width="795">
@@ -296,9 +298,9 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="19" dstpinname="Target Size [%]" hiddenwhenlocked="1" srcnodeid="11" srcpinname="Y Output Value">
+   <LINK dstnodeid="20" dstpinname="Target Size [%]" hiddenwhenlocked="1" srcnodeid="12" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="InABox" id="10" nodename="IOBox (String)">
+   <NODE componentmode="InABox" id="11" nodename="IOBox (String)">
    <BOUNDS height="270" left="5280" top="780" type="Node" width="1275">
    </BOUNDS>
    <BOUNDS height="240" left="5280" top="780" type="Box" width="1275">
@@ -312,7 +314,7 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="9" nodename="IOBox (String)">
+   <NODE componentmode="InABox" id="10" nodename="IOBox (String)">
    <BOUNDS height="270" left="8610" top="285" type="Node" width="855">
    </BOUNDS>
    <BOUNDS height="270" left="8610" top="285" type="Box" width="855">
@@ -326,7 +328,7 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="8" nodename="IOBox (String)">
+   <NODE componentmode="InABox" id="9" nodename="IOBox (String)">
    <BOUNDS height="270" left="8610" top="885" type="Node" width="615">
    </BOUNDS>
    <BOUNDS height="270" left="8610" top="885" type="Box" width="615">
@@ -340,7 +342,7 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="7" nodename="IOBox (String)">
+   <NODE componentmode="InABox" id="8" nodename="IOBox (String)">
    <BOUNDS height="0" left="6630" top="1080" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="240" left="6630" top="1080" type="Box" width="795">
@@ -352,7 +354,7 @@
    <PIN pinname="Output String" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="6" nodename="IOBox (String)">
+   <NODE componentmode="InABox" id="7" nodename="IOBox (String)">
    <BOUNDS height="270" left="4680" top="1080" type="Node" width="1875">
    </BOUNDS>
    <BOUNDS height="270" left="4680" top="1080" type="Box" width="1875">
@@ -366,9 +368,9 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK dstnodeid="19" dstpinname="Target File Format" hiddenwhenlocked="1" srcnodeid="24" srcpinname="Output Enum">
+   <LINK dstnodeid="20" dstpinname="Target File Format" hiddenwhenlocked="1" srcnodeid="25" srcpinname="Output Enum">
    </LINK>
-   <NODE componentmode="InABox" id="5" nodename="IOBox (String)">
+   <NODE componentmode="InABox" id="6" nodename="IOBox (String)">
    <BOUNDS height="270" left="5055" top="165" type="Node" width="1515">
    </BOUNDS>
    <BOUNDS height="270" left="5055" top="165" type="Box" width="1515">
@@ -382,7 +384,7 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="4" nodename="IOBox (Enumerations)">
+   <NODE componentmode="InABox" id="5" nodename="IOBox (Enumerations)">
    <BOUNDS height="0" left="6630" top="480" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="240" left="6630" top="480" type="Box" width="1005">
@@ -391,12 +393,12 @@
    </BOUNDS>
    <PIN pinname="Output Enum" visible="1">
    </PIN>
-   <PIN pinname="Input Enum" slicecount="1" values="DXT3">
+   <PIN pinname="Input Enum" slicecount="1" values="DXT5">
    </PIN>
    </NODE>
-   <LINK dstnodeid="19" dstpinname="Target Texture Format" hiddenwhenlocked="1" srcnodeid="4" srcpinname="Output Enum">
+   <LINK dstnodeid="20" dstpinname="Target Texture Format" hiddenwhenlocked="1" srcnodeid="5" srcpinname="Output Enum">
    </LINK>
-   <NODE componentmode="InABox" id="3" nodename="IOBox (String)">
+   <NODE componentmode="InABox" id="4" nodename="IOBox (String)">
    <BOUNDS height="270" left="4725" top="480" type="Node" width="1830">
    </BOUNDS>
    <BOUNDS height="270" left="4725" top="480" type="Box" width="1830">
@@ -410,12 +412,12 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK dstnodeid="19" dstpinname="Target Directory Suffix" hiddenwhenlocked="1" srcnodeid="7" srcpinname="Output String">
+   <LINK dstnodeid="20" dstpinname="Target Directory Suffix" hiddenwhenlocked="1" srcnodeid="8" srcpinname="Output String">
    </LINK>
-   <NODE componentmode="InABox" id="2" nodename="IOBox (String)">
-   <BOUNDS height="270" left="660" top="8175" type="Node" width="2565">
+   <NODE componentmode="InABox" id="3" nodename="IOBox (String)">
+   <BOUNDS height="270" left="660" top="8475" type="Node" width="2565">
    </BOUNDS>
-   <BOUNDS height="240" left="660" top="8175" type="Box" width="2565">
+   <BOUNDS height="240" left="660" top="8475" type="Box" width="2565">
    </BOUNDS>
    <BOUNDS height="160" left="0" top="0" type="Window" width="215">
    </BOUNDS>
@@ -426,10 +428,10 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="1" nodename="IOBox (String)">
-   <BOUNDS height="270" left="660" top="7920" type="Node" width="4755">
+   <NODE componentmode="InABox" id="2" nodename="IOBox (String)">
+   <BOUNDS height="270" left="660" top="8220" type="Node" width="4755">
    </BOUNDS>
-   <BOUNDS height="270" left="660" top="7920" type="Box" width="4755">
+   <BOUNDS height="270" left="660" top="8220" type="Box" width="4755">
    </BOUNDS>
    <BOUNDS height="160" left="0" top="0" type="Window" width="215">
    </BOUNDS>
@@ -440,10 +442,10 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="0" nodename="IOBox (String)">
-   <BOUNDS height="270" left="660" top="8490" type="Node" width="6015">
+   <NODE componentmode="InABox" id="1" nodename="IOBox (String)">
+   <BOUNDS height="270" left="660" top="8790" type="Node" width="6015">
    </BOUNDS>
-   <BOUNDS height="495" left="660" top="8490" type="Box" width="6000">
+   <BOUNDS height="495" left="660" top="8790" type="Box" width="6000">
    </BOUNDS>
    <BOUNDS height="160" left="0" top="0" type="Window" width="215">
    </BOUNDS>
@@ -454,14 +456,56 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="27" nodename="IOBox (String)">
-   <BOUNDS height="270" left="660" top="9375" type="Node" width="6015">
+   <NODE componentmode="InABox" id="0" nodename="IOBox (String)">
+   <BOUNDS height="270" left="660" top="9675" type="Node" width="6015">
    </BOUNDS>
-   <BOUNDS height="375" left="660" top="9375" type="Box" width="6000">
+   <BOUNDS height="375" left="660" top="9675" type="Box" width="6000">
    </BOUNDS>
    <BOUNDS height="160" left="300" top="300" type="Window" width="215">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="0" values="|textureConverter by rrrr 2008.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="28" nodename="IOBox (String)">
+   <BOUNDS height="270" left="4140" top="1380" type="Node" width="1875">
+   </BOUNDS>
+   <BOUNDS height="255" left="4140" top="1380" type="Box" width="2325">
+   </BOUNDS>
+   <BOUNDS height="160" left="300" top="300" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|constrain to max texture size &gt;|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="30">
+   <BOUNDS type="Node" left="6615" top="1395" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6615" top="1395" width="810" height="255">
+   </BOUNDS>
+   <BOUNDS type="Window" left="10455" top="2865" width="215" height="160">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="8192">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="30" srcpinname="Y Output Value" dstnodeid="20" dstpinname="Maximum Texture Size" hiddenwhenlocked="1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="31">
+   <BOUNDS type="Node" left="7500" top="1395" width="1725" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7500" top="1395" width="1725" height="270">
+   </BOUNDS>
+   <BOUNDS type="Window" left="0" top="0" width="215" height="160">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|(keeps original aspect)|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
