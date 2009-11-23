@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv40alpha21.1.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv40alpha21.4.dtd" >
    <PATCH nodename="C:\Users\joreg\dev\vvvv_trunk\tools\MeshViewer\MESHVIEWER.v4p" locked="1">
    <BOUNDS height="5370" left="1500" top="8160" type="Window" width="9840">
    </BOUNDS>
@@ -30,7 +30,7 @@
    <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="D24X8">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="56" nodename=":MODULES:\vvvv group\Transform\Camera (Transform Softimage).v4p" path="C:\Users\joreg\work\t_gallery\vvvv\modules\vvvv group\Transform\">
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="56" nodename=":MODULES:\vvvv group\Transform\Camera (Transform Softimage).v4p" path="C:\Users\joreg\dev\vvvv_trunk\modules\vvvv group\Transform\">
    <BOUNDS height="0" left="7440" top="5685" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="6000" left="13890" top="7665" type="Window" width="9000">
@@ -713,7 +713,7 @@
    </BOUNDS>
    <PIN pinname="Output Enum" visible="1">
    </PIN>
-   <PIN pinname="Input Enum" slicecount="1" values="Counterclockwise">
+   <PIN pinname="Input Enum" slicecount="1" values="None">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="15" nodename="IOBox (String)">
