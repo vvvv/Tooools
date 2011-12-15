@@ -183,7 +183,7 @@
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Source Directory|" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Source Directory|">
    </PIN>
    </NODE>
    <LINK dstnodeid="70" dstpinname="Directory" srcnodeid="64" srcpinname="Output String">
@@ -299,7 +299,7 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Process" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Process">
    </PIN>
    </NODE>
    <LINK dstnodeid="59" dstpinname="Set" srcnodeid="58" srcpinname="Y Output Value">
@@ -357,7 +357,7 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Stop" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Stop">
    </PIN>
    </NODE>
    <NODE id="54" nodename="OR (Boolean)">
@@ -465,7 +465,7 @@
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="1" values="_CONV">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Target Directory Suffix|" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Target Directory Suffix|">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -507,7 +507,7 @@
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Source File Mask|" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Source File Mask|">
    </PIN>
    </NODE>
    <LINK dstnodeid="70" dstpinname="Mask" srcnodeid="45" srcpinname="Output String">
@@ -535,7 +535,7 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Target Height [%]|" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Target Height [%]|">
    </PIN>
    </NODE>
    <NODE id="42" nodename="Divide (Value)">
@@ -653,7 +653,7 @@
    </PIN>
    <PIN pinname="Input Enum" slicecount="1" values="DDS">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Target File Format|" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Target File Format|">
    </PIN>
    </NODE>
    <NODE id="34" nodename="Switch (Node Input)">
@@ -749,7 +749,7 @@
    </BOUNDS>
    <PIN pinname="Input Node" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Src" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Src">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="28" nodename="IOBox (Node)">
@@ -761,7 +761,7 @@
    </BOUNDS>
    <PIN pinname="Input Node" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Trgt" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Trgt">
    </PIN>
    </NODE>
    <LINK dstnodeid="28" dstpinname="Input Node" srcnodeid="36" srcpinname="Layer">
@@ -777,7 +777,7 @@
    </BOUNDS>
    <PIN pinname="Input String" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Target Format|" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Target Format|">
    </PIN>
    </NODE>
    <LINK dstnodeid="27" dstpinname="Input String" srcnodeid="39" srcpinname="Format Description">
@@ -791,7 +791,7 @@
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Include Subdirectories|" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Include Subdirectories|">
    </PIN>
    </NODE>
    <LINK dstnodeid="70" dstpinname="Include Subdirectories" srcnodeid="26" srcpinname="Y Output Value">
@@ -819,7 +819,7 @@
    </BOUNDS>
    <PIN pinname="Input Node" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Progress" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Progress">
    </PIN>
    </NODE>
    <LINK dstnodeid="24" dstpinname="Input Node" srcnodeid="25" srcpinname="Progress">
@@ -838,30 +838,6 @@
    </LINK>
    <LINK dstnodeid="25" dstpinname="Current" srcnodeid="68" srcpinname="Output">
    </LINK>
-   <NODE id="22" nodename="Enum2Ord (Enumerations)">
-   <BOUNDS height="0" left="225" top="9930" type="Node" width="0">
-   </BOUNDS>
-   <PIN pinname="Enum" visible="1">
-   </PIN>
-   <PIN pinname="Ord Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="22" dstpinname="Enum" srcnodeid="35" srcpinname="Output Enum">
-   </LINK>
-   <NODE id="21" nodename="EQ (Value)">
-   <BOUNDS height="0" left="225" top="10470" type="Node" width="0">
-   </BOUNDS>
-   <PIN pinname="Input 2" visible="1">
-   </PIN>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="21" dstpinname="Input 1" srcnodeid="22" srcpinname="Ord Value">
-   </LINK>
-   <LINK dstnodeid="31" dstpinname="Y Input Value" srcnodeid="21" srcpinname="Output">
-   </LINK>
    <NODE componentmode="InABox" id="20" nodename="IOBox (String)">
    <BOUNDS height="270" left="3015" top="11865" type="Node" width="1350">
    </BOUNDS>
@@ -869,7 +845,7 @@
    </BOUNDS>
    <BOUNDS height="160" left="0" top="0" type="Window" width="215">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|fix to create DDS with DXT compression instead of ARGB|" encoded="0">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|fix to create DDS with DXT compression instead of ARGB|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -933,7 +909,7 @@
    </BOUNDS>
    <PIN pinname="Output Enum" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Target Texture Format|" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Target Texture Format|">
    </PIN>
    </NODE>
    <LINK dstnodeid="37" dstpinname="Format" srcnodeid="16" srcpinname="Output Enum">
@@ -981,7 +957,7 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Maximum Texture Size|" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Maximum Texture Size|">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="12" nodename="Multiply (Value)">
@@ -1071,99 +1047,13 @@
    </BOUNDS>
    <BOUNDS height="160" left="0" top="0" type="Window" width="215">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt; constrain to 8192 max texturesize&cr;&lf;keeping original aspect|" encoded="0">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|&lt; constrain to 8192 max texturesize&cr;&lf;keeping original aspect|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="6" nodename="Info (Enumerations)">
-   <BOUNDS height="0" left="11535" top="11925" type="Node" width="0">
-   </BOUNDS>
-   <PIN pinname="Update" visible="1">
-   </PIN>
-   <PIN pinname="Name" visible="1">
-   </PIN>
-   <PIN pinname="Entries" visible="1">
-   </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" id="5" nodename="Sift (String)">
-   <BOUNDS height="0" left="11535" top="12750" type="Node" width="0">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Filter" visible="1">
-   </PIN>
-   <PIN pinname="Input Index" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="5" dstpinname="Input" srcnodeid="6" srcpinname="Name">
-   </LINK>
-   <NODE componentmode="InABox" id="4" nodename="IOBox (String)">
-   <BOUNDS height="270" left="11685" top="12285" type="Node" width="660">
-   </BOUNDS>
-   <BOUNDS height="300" left="11685" top="12285" type="Box" width="1530">
-   </BOUNDS>
-   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
-   </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="TextureFileFormats" encoded="0">
-   </PIN>
-   <PIN pinname="Output String" visible="1">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="5" dstpinname="Filter" srcnodeid="4" srcpinname="Output String">
-   </LINK>
-   <NODE componentmode="Hidden" id="3" nodename="GetSlice (String)">
-   <BOUNDS height="0" left="11940" top="13305" type="Node" width="0">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Index" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="3" dstpinname="Input" srcnodeid="6" srcpinname="Entries">
-   </LINK>
-   <LINK dstnodeid="3" dstpinname="Index" srcnodeid="5" srcpinname="Input Index">
-   </LINK>
-   <NODE componentmode="Hidden" id="2" nodename="Separate (String)">
-   <BOUNDS height="0" left="11940" top="13755" type="Node" width="0">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Intersperse" slicecount="1" values="Comma">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="2" dstpinname="Input" srcnodeid="3" srcpinname="Output">
-   </LINK>
-   <NODE componentmode="Hidden" id="1" nodename="Sift (String)">
-   <BOUNDS height="0" left="11940" top="14145" type="Node" width="0">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Filter" slicecount="1" values="DDS" encoded="0">
-   </PIN>
-   <PIN pinname="Input Index" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="1" dstpinname="Input" srcnodeid="2" srcpinname="Output">
-   </LINK>
-   <NODE componentmode="Hidden" id="0" nodename="OnOpen (VVVV)">
-   <BOUNDS height="0" left="11535" top="11490" type="Node" width="0">
-   </BOUNDS>
-   <PIN pinname="Bang" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="6" dstpinname="Update" srcnodeid="0" srcpinname="Bang">
-   </LINK>
-   <LINK dstnodeid="21" dstpinname="Input 2" srcnodeid="1" srcpinname="Input Index">
-   </LINK>
    <NODE componentmode="InABox" id="77" nodename="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="0" left="3570" top="180" type="Node" width="0">
    </BOUNDS>
@@ -1175,7 +1065,7 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Target Width [%]|" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Target Width [%]|">
    </PIN>
    </NODE>
    <NODE id="76" nodename="Divide (Value)">
@@ -1192,6 +1082,32 @@
    </LINK>
    <LINK dstnodeid="41" dstpinname="Input 2" srcnodeid="76" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="59" srcpinname="Output" dstnodeid="38" dstpinname="Read">
+   <LINK dstnodeid="38" dstpinname="Read" srcnodeid="59" srcpinname="Output">
+   </LINK>
+   <NODE id="21" nodename="EQ (String)" systemname="EQ (String)">
+   <BOUNDS height="0" left="225" top="10470" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="DDS" encoded="0">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="31" dstpinname="Y Input Value" srcnodeid="21" srcpinname="Output">
+   </LINK>
+   <NODE id="22" nodename="Enum2String (Enumerations)" systemname="Enum2String (Enumerations)">
+   <BOUNDS height="0" left="225" top="9930" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   <PIN pinname="Ord Value" visible="1">
+   </PIN>
+   <PIN pinname="String Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="22" dstpinname="Enum" srcnodeid="35" srcpinname="Output Enum">
+   </LINK>
+   <LINK srcnodeid="22" srcpinname="String Value" dstnodeid="21" dstpinname="Input 1">
    </LINK>
    </PATCH>
