@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug26.1.dtd" >
-   <PATCH nodename="C:\Users\Joreg\dev\github\Tooools\TextureConverter\converrrrt.v4p">
-   <BOUNDS height="17100" left="11580" top="915" type="Window" width="15345">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
+   <PATCH nodename="E:\Tooools\TextureConverter\converrrrt.v4p">
+   <BOUNDS height="17100" left="3465" top="0" type="Window" width="15345">
    </BOUNDS>
    <NODE id="75" nodename="FILETEXTURE (EX9.TEXTURE)">
    <BOUNDS height="0" left="2460" top="7245" type="Node" width="0">
@@ -21,7 +21,7 @@
    </PIN>
    </NODE>
    <NODE id="74" nodename="Writer (EX9.Texture)">
-   <BOUNDS height="270" left="8130" top="14520" type="Node" width="750">
+   <BOUNDS height="270" left="8130" top="15720" type="Node" width="750">
    </BOUNDS>
    <PIN pinname="Texture" visible="1">
    </PIN>
@@ -34,10 +34,10 @@
    <PIN pinname="Only Render On Save" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="73" nodename="RENDERER (EX9)">
+   <NODE componentmode="InAWindow" id="73" nodename="RENDERER (EX9)">
    <BOUNDS height="270" left="2910" top="10830" type="Node" width="1500">
    </BOUNDS>
-   <BOUNDS height="5925" left="4005" top="10260" type="Window" width="6240">
+   <BOUNDS height="5925" left="15840" top="11025" type="Window" width="6240">
    </BOUNDS>
    <BOUNDS height="375" left="2910" top="10830" type="Box" width="1500">
    </BOUNDS>
@@ -51,7 +51,7 @@
    </PIN>
    <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="NONE">
    </PIN>
-   <PIN pinname="Background Color" slicecount="1" values="|0.80984,0.80984,0.80984,0.00000|">
+   <PIN pinname="Background Color" slicecount="1" values="|0.00000,0.00000,0.00000,0.00000|">
    </PIN>
    <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
    </PIN>
@@ -65,7 +65,7 @@
    </PIN>
    </NODE>
    <NODE id="72" nodename="DX9Texture (EX9.Texture)">
-   <BOUNDS height="0" left="2550" top="11550" type="Node" width="0">
+   <BOUNDS height="0" left="2580" top="12810" type="Node" width="0">
    </BOUNDS>
    <PIN pinname="Source" visible="1">
    </PIN>
@@ -75,7 +75,7 @@
    </PIN>
    <PIN pinname="Height" pintype="Input" visible="1">
    </PIN>
-   <PIN pinname="Format" pintype="Input" visible="1">
+   <PIN pinname="Format" pintype="Input" visible="1" slicecount="1" values="|No Specific|">
    </PIN>
    <PIN pinname="Repair" slicecount="1" values="1">
    </PIN>
@@ -149,11 +149,11 @@
    <LINK dstnodeid="68" dstpinname="Maximum" srcnodeid="67" srcpinname="Count">
    </LINK>
    <NODE componentmode="InABox" id="66" nodename="IOBox (String)">
-   <BOUNDS height="0" left="1125" top="16155" type="Node" width="0">
+   <BOUNDS height="0" left="1125" top="17355" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="160" left="13935" top="4890" type="Window" width="215">
    </BOUNDS>
-   <BOUNDS height="270" left="1125" top="16155" type="Box" width="6720">
+   <BOUNDS height="270" left="1125" top="17355" type="Box" width="6720">
    </BOUNDS>
    <PIN pinname="Input String" visible="1">
    </PIN>
@@ -407,9 +407,9 @@
    <LINK dstnodeid="52" dstpinname="Input" srcnodeid="59" srcpinname="Output">
    </LINK>
    <LINK dstnodeid="66" dstpinname="Input String" linkstyle="VHV" srcnodeid="69" srcpinname="Output">
-   <LINKPOINT x="3660" y="8490">
+   <LINKPOINT x="3660" y="8890">
    </LINKPOINT>
-   <LINKPOINT x="13260" y="8490">
+   <LINKPOINT x="13260" y="9290">
    </LINKPOINT>
    </LINK>
    <LINK dstnodeid="74" dstpinname="FileName" srcnodeid="60" srcpinname="Output">
@@ -513,11 +513,11 @@
    <LINK dstnodeid="70" dstpinname="Mask" srcnodeid="45" srcpinname="Output String">
    </LINK>
    <NODE componentmode="InABox" id="44" nodename="IOBox (String)">
-   <BOUNDS height="0" left="1680" top="16440" type="Node" width="0">
+   <BOUNDS height="0" left="1680" top="17640" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="160" left="13695" top="16995" type="Window" width="215">
    </BOUNDS>
-   <BOUNDS height="300" left="1680" top="16440" type="Box" width="6060">
+   <BOUNDS height="300" left="1680" top="17640" type="Box" width="6060">
    </BOUNDS>
    <PIN pinname="Input String" visible="1">
    </PIN>
@@ -577,7 +577,7 @@
    <LINK dstnodeid="72" dstpinname="Height" srcnodeid="40" srcpinname="Output">
    </LINK>
    <NODE id="39" nodename="INFO (EX9.TEXTURE)">
-   <BOUNDS height="0" left="6990" top="15675" type="Node" width="0">
+   <BOUNDS height="0" left="6990" top="16875" type="Node" width="0">
    </BOUNDS>
    <PIN pinname="Texture" visible="1">
    </PIN>
@@ -585,7 +585,7 @@
    </PIN>
    </NODE>
    <NODE id="38" nodename="AsString (EX9.Texture)">
-   <BOUNDS height="0" left="2325" top="12705" type="Node" width="0">
+   <BOUNDS height="0" left="2325" top="13905" type="Node" width="0">
    </BOUNDS>
    <PIN pinname="Texture" slicecount="1" visible="1" values="||">
    </PIN>
@@ -597,7 +597,7 @@
    </PIN>
    </NODE>
    <NODE id="37" nodename="DynamicTexture (EX9.Texture String)">
-   <BOUNDS height="0" left="960" top="13560" type="Node" width="0">
+   <BOUNDS height="0" left="960" top="14760" type="Node" width="0">
    </BOUNDS>
    <PIN pinname="Data" visible="1">
    </PIN>
@@ -657,7 +657,7 @@
    </PIN>
    </NODE>
    <NODE id="34" nodename="Switch (Node Input)">
-   <BOUNDS height="0" left="2505" top="14295" type="Node" width="0">
+   <BOUNDS height="0" left="2505" top="15495" type="Node" width="0">
    </BOUNDS>
    <PIN pinname="Switch" visible="1">
    </PIN>
@@ -671,9 +671,9 @@
    <LINK dstnodeid="34" dstpinname="Input 1" srcnodeid="72" srcpinname="Texture Out">
    </LINK>
    <LINK dstnodeid="36" dstpinname="Texture" linkstyle="Bezier" srcnodeid="34" srcpinname="Output">
-   <LINKPOINT x="15" y="16650">
+   <LINKPOINT x="8355" y="19050">
    </LINKPOINT>
-   <LINKPOINT x="210" y="8595">
+   <LINKPOINT x="11205" y="7035">
    </LINKPOINT>
    </LINK>
    <LINK dstnodeid="74" dstpinname="Texture" srcnodeid="34" srcpinname="Output">
@@ -681,7 +681,7 @@
    <LINK dstnodeid="74" dstpinname="File Format" srcnodeid="35" srcpinname="Output Enum">
    </LINK>
    <NODE id="33" nodename="Blend (EX9.RenderState Advanced)">
-   <BOUNDS height="0" left="3315" top="9225" type="Node" width="0">
+   <BOUNDS height="0" left="2895" top="9060" type="Node" width="0">
    </BOUNDS>
    <PIN pinname="Render State Out" visible="1">
    </PIN>
@@ -691,7 +691,7 @@
    </PIN>
    </NODE>
    <NODE id="32" nodename="Switch (Node Input)">
-   <BOUNDS height="0" left="2310" top="12255" type="Node" width="0">
+   <BOUNDS height="0" left="2310" top="13425" type="Node" width="0">
    </BOUNDS>
    <PIN pinname="Switch" visible="1">
    </PIN>
@@ -769,11 +769,11 @@
    <LINK dstnodeid="39" dstpinname="Texture" srcnodeid="34" srcpinname="Output">
    </LINK>
    <NODE componentmode="InABox" id="27" nodename="IOBox (String)">
-   <BOUNDS height="0" left="6945" top="16845" type="Node" width="0">
+   <BOUNDS height="0" left="6945" top="18045" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="160" left="12540" top="13605" type="Window" width="215">
    </BOUNDS>
-   <BOUNDS height="240" left="6945" top="16845" type="Box" width="795">
+   <BOUNDS height="240" left="6945" top="18045" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Input String" visible="1">
    </PIN>
@@ -839,9 +839,9 @@
    <LINK dstnodeid="25" dstpinname="Current" srcnodeid="68" srcpinname="Output">
    </LINK>
    <NODE componentmode="InABox" id="20" nodename="IOBox (String)">
-   <BOUNDS height="270" left="3015" top="11865" type="Node" width="1350">
+   <BOUNDS height="270" left="3015" top="13065" type="Node" width="1350">
    </BOUNDS>
-   <BOUNDS height="750" left="3015" top="11865" type="Box" width="1620">
+   <BOUNDS height="750" left="3015" top="13065" type="Box" width="1620">
    </BOUNDS>
    <BOUNDS height="160" left="0" top="0" type="Window" width="215">
    </BOUNDS>
@@ -853,9 +853,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="19" nodename=":MODULES:\vvvv group\Spreads\AvoidNIL (Spreads).v4p">
-   <BOUNDS height="0" left="300" top="12405" type="Node" width="0">
+   <BOUNDS height="0" left="300" top="13605" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="3600" left="300" top="12405" type="Box" width="4800">
+   <BOUNDS height="3600" left="300" top="13605" type="Box" width="4800">
    </BOUNDS>
    <BOUNDS height="6000" left="7830" top="12270" type="Window" width="9000">
    </BOUNDS>
@@ -869,9 +869,9 @@
    <LINK dstnodeid="37" dstpinname="Width" srcnodeid="19" srcpinname="Output">
    </LINK>
    <NODE componentmode="Hidden" id="18" nodename=":MODULES:\vvvv group\Spreads\AvoidNIL (Spreads).v4p">
-   <BOUNDS height="0" left="960" top="12750" type="Node" width="0">
+   <BOUNDS height="0" left="960" top="13950" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="3600" left="960" top="12750" type="Box" width="4800">
+   <BOUNDS height="3600" left="960" top="13950" type="Box" width="4800">
    </BOUNDS>
    <BOUNDS height="6000" left="8130" top="12570" type="Window" width="9000">
    </BOUNDS>
@@ -885,9 +885,9 @@
    <LINK dstnodeid="18" dstpinname="Input" srcnodeid="40" srcpinname="Output">
    </LINK>
    <NODE componentmode="Hidden" id="17" nodename=":MODULES:\vvvv group\String\AvoidNIL (String).v4p">
-   <BOUNDS height="0" left="2340" top="13125" type="Node" width="0">
+   <BOUNDS height="0" left="2340" top="14325" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="3600" left="2340" top="13125" type="Box" width="4800">
+   <BOUNDS height="3600" left="2340" top="14325" type="Box" width="4800">
    </BOUNDS>
    <BOUNDS height="6000" left="10530" top="13515" type="Window" width="9000">
    </BOUNDS>
@@ -921,10 +921,12 @@
    </PIN>
    <PIN pinname="Texture Transform" slicecount="1" visible="1" values="||">
    </PIN>
+   <PIN pinname="Render State" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
    </NODE>
    <LINK dstnodeid="15" dstpinname="Transform" srcnodeid="71" srcpinname="Transform Out">
-   </LINK>
-   <LINK dstnodeid="15" dstpinname="Render State" srcnodeid="33" srcpinname="Render State Out">
    </LINK>
    <LINK dstnodeid="15" dstpinname="Texture" srcnodeid="75" srcpinname="Texture Out">
    </LINK>
@@ -933,8 +935,6 @@
    <LINK dstnodeid="73" dstpinname="Layers" srcnodeid="15" srcpinname="Layer">
    </LINK>
    <LINK dstnodeid="29" dstpinname="Input Node" srcnodeid="30" srcpinname="Layer">
-   </LINK>
-   <LINK dstnodeid="72" dstpinname="Format" srcnodeid="16" srcpinname="Output Enum">
    </LINK>
    <NODE componentmode="Hidden" id="14" nodename="Divide (Value)">
    <BOUNDS height="0" left="1710" top="8145" type="Node" width="0">
@@ -1087,7 +1087,7 @@
    <NODE id="21" nodename="EQ (String)" systemname="EQ (String)">
    <BOUNDS height="0" left="225" top="10470" type="Node" width="0">
    </BOUNDS>
-   <PIN pinname="Input 2" visible="1" slicecount="1" values="DDS" encoded="0">
+   <PIN pinname="Input 2" visible="1" slicecount="1" encoded="0" values="DDS">
    </PIN>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -1109,5 +1109,43 @@
    <LINK dstnodeid="22" dstpinname="Enum" srcnodeid="35" srcpinname="Output Enum">
    </LINK>
    <LINK srcnodeid="22" srcpinname="String Value" dstnodeid="21" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="33" srcpinname="Render State Out" dstnodeid="15" dstpinname="Render State">
+   </LINK>
+   <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="78">
+   <BOUNDS type="Node" left="2580" top="11820" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Ord2Enum (Enumerations)" nodename="Ord2Enum (Enumerations)" componentmode="Hidden" id="79">
+   <BOUNDS type="Node" left="2580" top="12225" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Ord Value" visible="1">
+   </PIN>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Enum2Ord (Enumerations)" nodename="Enum2Ord (Enumerations)" componentmode="Hidden" id="80">
+   <BOUNDS type="Node" left="2865" top="11415" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   <PIN pinname="Ord Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="16" srcpinname="Output Enum" dstnodeid="80" dstpinname="Enum">
+   </LINK>
+   <LINK srcnodeid="80" srcpinname="Ord Value" dstnodeid="78" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="78" srcpinname="Output" dstnodeid="79" dstpinname="Ord Value">
+   </LINK>
+   <LINK srcnodeid="79" srcpinname="Enum" dstnodeid="72" dstpinname="Format">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="Output" dstnodeid="78" dstpinname="Switch">
    </LINK>
    </PATCH>
