@@ -34,7 +34,7 @@
    <PIN pinname="Only Render On Save" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <NODE componentmode="InAWindow" id="73" nodename="RENDERER (EX9)">
+   <NODE componentmode="Hidden" id="73" nodename="RENDERER (EX9)">
    <BOUNDS height="270" left="2910" top="10830" type="Node" width="1500">
    </BOUNDS>
    <BOUNDS height="5925" left="15840" top="11025" type="Window" width="6240">
