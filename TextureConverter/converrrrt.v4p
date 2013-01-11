@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
-   <PATCH nodename="E:\Tooools\TextureConverter\converrrrt.v4p">
-   <BOUNDS height="17100" left="3465" top="0" type="Window" width="15345">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
+   <PATCH nodename="C:\Users\Joreg\Desktop\vvvvs\_bugs\texconverter\converrrrt.v4p">
+   <BOUNDS height="16380" left="13455" top="315" type="Window" width="15345">
    </BOUNDS>
    <NODE id="75" nodename="FILETEXTURE (EX9.TEXTURE)">
    <BOUNDS height="0" left="2460" top="7245" type="Node" width="0">
@@ -37,7 +37,7 @@
    <NODE componentmode="Hidden" id="73" nodename="RENDERER (EX9)">
    <BOUNDS height="270" left="2910" top="10830" type="Node" width="1500">
    </BOUNDS>
-   <BOUNDS height="5925" left="15840" top="11025" type="Window" width="6240">
+   <BOUNDS height="5925" left="6105" top="9855" type="Window" width="6240">
    </BOUNDS>
    <BOUNDS height="375" left="2910" top="10830" type="Box" width="1500">
    </BOUNDS>
@@ -75,7 +75,7 @@
    </PIN>
    <PIN pinname="Height" pintype="Input" visible="1">
    </PIN>
-   <PIN pinname="Format" pintype="Input" visible="1" slicecount="1" values="|No Specific|">
+   <PIN pinname="Format" pintype="Input" visible="1" slicecount="1" values="R5G6B5">
    </PIN>
    <PIN pinname="Repair" slicecount="1" values="1">
    </PIN>
@@ -685,7 +685,7 @@
    </BOUNDS>
    <PIN pinname="Render State Out" visible="1">
    </PIN>
-   <PIN pinname="Source Blend Mode" slicecount="1" values="One">
+   <PIN pinname="Source Blend Mode" slicecount="1" values="SrcAlpha">
    </PIN>
    <PIN pinname="Destination Blend Mode" slicecount="1" values="DestAlpha">
    </PIN>
@@ -737,8 +737,6 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="30" dstpinname="Transform" srcnodeid="71" srcpinname="Transform Out">
-   </LINK>
-   <LINK dstnodeid="30" dstpinname="Texture" srcnodeid="75" srcpinname="Texture Out">
    </LINK>
    <NODE componentmode="InABox" id="29" nodename="IOBox (Node)">
    <BOUNDS height="0" left="5820" top="10200" type="Node" width="0">
@@ -1121,6 +1119,8 @@
    </PIN>
    <PIN pinname="Switch" visible="1">
    </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="2">
+   </PIN>
    </NODE>
    <NODE systemname="Ord2Enum (Enumerations)" nodename="Ord2Enum (Enumerations)" componentmode="Hidden" id="79">
    <BOUNDS type="Node" left="2580" top="12225" width="100" height="100">
@@ -1144,8 +1144,26 @@
    </LINK>
    <LINK srcnodeid="78" srcpinname="Output" dstnodeid="79" dstpinname="Ord Value">
    </LINK>
+   <LINK srcnodeid="21" srcpinname="Output" dstnodeid="78" dstpinname="Switch">
+   </LINK>
    <LINK srcnodeid="79" srcpinname="Enum" dstnodeid="72" dstpinname="Format">
    </LINK>
-   <LINK srcnodeid="21" srcpinname="Output" dstnodeid="78" dstpinname="Switch">
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="81" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="4635" top="11625" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4635" top="11625" width="345" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="81" srcpinname="Y Output Value" dstnodeid="78" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="75" srcpinname="Texture Out" dstnodeid="30" dstpinname="Texture">
    </LINK>
    </PATCH>
