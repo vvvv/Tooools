@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
-   <PATCH nodename="C:\Users\Joreg\Desktop\vvvvs\_bugs\texconverter\converrrrt.v4p">
-   <BOUNDS height="16380" left="13455" top="315" type="Window" width="15345">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
+   <PATCH nodename="C:\Users\joreg\dev\repos\Tooools\TextureConverter\converrrrt.v4p">
+   <BOUNDS height="17100" left="11595" top="450" type="Window" width="15345">
    </BOUNDS>
    <NODE id="75" nodename="FILETEXTURE (EX9.TEXTURE)">
    <BOUNDS height="0" left="2460" top="7245" type="Node" width="0">
@@ -23,7 +23,7 @@
    <NODE id="74" nodename="Writer (EX9.Texture)">
    <BOUNDS height="270" left="8130" top="15720" type="Node" width="750">
    </BOUNDS>
-   <PIN pinname="Texture" visible="1">
+   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="File Format" visible="1">
    </PIN>
@@ -382,7 +382,7 @@
    <LINKPOINT x="9645" y="855">
    </LINKPOINT>
    </LINK>
-   <NODE id="53" nodename="FrameDelay (Animation)">
+   <NODE id="53" nodename="FrameDelay (Animation)" systemname="FrameDelay (Animation Legacy)">
    <BOUNDS height="0" left="7530" top="1545" type="Node" width="0">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
@@ -579,45 +579,9 @@
    <NODE id="39" nodename="INFO (EX9.TEXTURE)">
    <BOUNDS height="0" left="6990" top="16875" type="Node" width="0">
    </BOUNDS>
-   <PIN pinname="Texture" visible="1">
+   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Format Description" visible="1">
-   </PIN>
-   </NODE>
-   <NODE id="38" nodename="AsString (EX9.Texture)">
-   <BOUNDS height="0" left="2325" top="13905" type="Node" width="0">
-   </BOUNDS>
-   <PIN pinname="Texture" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="Content" visible="1">
-   </PIN>
-   <PIN pinname="File Format" slicecount="1" values="DDS">
-   </PIN>
-   <PIN pinname="Read" visible="1">
-   </PIN>
-   </NODE>
-   <NODE id="37" nodename="DynamicTexture (EX9.Texture String)">
-   <BOUNDS height="0" left="960" top="14760" type="Node" width="0">
-   </BOUNDS>
-   <PIN pinname="Data" visible="1">
-   </PIN>
-   <PIN pinname="Format" pintype="Input" visible="1">
-   </PIN>
-   <PIN pinname="Texture Out" visible="1">
-   </PIN>
-   <PIN pinname="Width" pintype="Input" visible="1">
-   </PIN>
-   <PIN pinname="Height" pintype="Input" visible="1">
-   </PIN>
-   <PIN pinname="Depth" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Filter" slicecount="1" values="|Filter/Dither Default |">
-   </PIN>
-   <PIN pinname="Mip Map Dither" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Mip Map Filter" slicecount="1" values="None">
-   </PIN>
-   <PIN pinname="Dither" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK dstnodeid="44" dstpinname="Input String" srcnodeid="39" srcpinname="Format Description">
@@ -625,7 +589,7 @@
    <NODE id="36" nodename="Quad (DX9)">
    <BOUNDS height="0" left="7455" top="9690" type="Node" width="0">
    </BOUNDS>
-   <PIN pinname="Texture" visible="1">
+   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -663,7 +627,7 @@
    </PIN>
    <PIN pinname="Input 1" visible="1">
    </PIN>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -719,8 +683,6 @@
    <LINK dstnodeid="34" dstpinname="Switch" srcnodeid="31" srcpinname="Y Output Value">
    </LINK>
    <LINK dstnodeid="32" dstpinname="Input 2" srcnodeid="72" srcpinname="Texture Out">
-   </LINK>
-   <LINK dstnodeid="38" dstpinname="Texture" srcnodeid="32" srcpinname="Output">
    </LINK>
    <NODE id="30" nodename="Quad (DX9)">
    <BOUNDS height="0" left="5820" top="9690" type="Node" width="0">
@@ -837,13 +799,13 @@
    <LINK dstnodeid="25" dstpinname="Current" srcnodeid="68" srcpinname="Output">
    </LINK>
    <NODE componentmode="InABox" id="20" nodename="IOBox (String)">
-   <BOUNDS height="270" left="3015" top="13065" type="Node" width="1350">
+   <BOUNDS height="270" left="3195" top="13425" type="Node" width="1350">
    </BOUNDS>
-   <BOUNDS height="750" left="3015" top="13065" type="Box" width="1620">
+   <BOUNDS height="750" left="3195" top="13425" type="Box" width="2025">
    </BOUNDS>
    <BOUNDS height="160" left="0" top="0" type="Window" width="215">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|fix to create DDS with DXT compression instead of ARGB|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|workaround to create DDS with DXT compression instead of ARGB|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -851,9 +813,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="19" nodename=":MODULES:\vvvv group\Spreads\AvoidNIL (Spreads).v4p">
-   <BOUNDS height="0" left="300" top="13605" type="Node" width="0">
+   <BOUNDS height="0" left="300" top="13980" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="3600" left="300" top="13605" type="Box" width="4800">
+   <BOUNDS height="3600" left="300" top="13980" type="Box" width="4800">
    </BOUNDS>
    <BOUNDS height="6000" left="7830" top="12270" type="Window" width="9000">
    </BOUNDS>
@@ -864,12 +826,10 @@
    </NODE>
    <LINK dstnodeid="19" dstpinname="Input" srcnodeid="41" srcpinname="Output">
    </LINK>
-   <LINK dstnodeid="37" dstpinname="Width" srcnodeid="19" srcpinname="Output">
-   </LINK>
    <NODE componentmode="Hidden" id="18" nodename=":MODULES:\vvvv group\Spreads\AvoidNIL (Spreads).v4p">
-   <BOUNDS height="0" left="960" top="13950" type="Node" width="0">
+   <BOUNDS height="0" left="1290" top="13980" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="3600" left="960" top="13950" type="Box" width="4800">
+   <BOUNDS height="3600" left="1290" top="13980" type="Box" width="4800">
    </BOUNDS>
    <BOUNDS height="6000" left="8130" top="12570" type="Window" width="9000">
    </BOUNDS>
@@ -878,25 +838,7 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="37" dstpinname="Height" srcnodeid="18" srcpinname="Output">
-   </LINK>
    <LINK dstnodeid="18" dstpinname="Input" srcnodeid="40" srcpinname="Output">
-   </LINK>
-   <NODE componentmode="Hidden" id="17" nodename=":MODULES:\vvvv group\String\AvoidNIL (String).v4p">
-   <BOUNDS height="0" left="2340" top="14325" type="Node" width="0">
-   </BOUNDS>
-   <BOUNDS height="3600" left="2340" top="14325" type="Box" width="4800">
-   </BOUNDS>
-   <BOUNDS height="6000" left="10530" top="13515" type="Window" width="9000">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="17" dstpinname="Input" srcnodeid="38" srcpinname="Content">
-   </LINK>
-   <LINK dstnodeid="37" dstpinname="Data" srcnodeid="17" srcpinname="Output">
    </LINK>
    <NODE componentmode="InABox" id="16" nodename="IOBox (Enumerations)">
    <BOUNDS height="0" left="13395" top="1170" type="Node" width="0">
@@ -910,8 +852,6 @@
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Target Texture Format|">
    </PIN>
    </NODE>
-   <LINK dstnodeid="37" dstpinname="Format" srcnodeid="16" srcpinname="Output Enum">
-   </LINK>
    <NODE id="15" nodename="Quad (DX9)">
    <BOUNDS height="0" left="3330" top="9690" type="Node" width="0">
    </BOUNDS>
@@ -927,8 +867,6 @@
    <LINK dstnodeid="15" dstpinname="Transform" srcnodeid="71" srcpinname="Transform Out">
    </LINK>
    <LINK dstnodeid="15" dstpinname="Texture" srcnodeid="75" srcpinname="Texture Out">
-   </LINK>
-   <LINK dstnodeid="34" dstpinname="Input 2" srcnodeid="37" srcpinname="Texture Out">
    </LINK>
    <LINK dstnodeid="73" dstpinname="Layers" srcnodeid="15" srcpinname="Layer">
    </LINK>
@@ -956,6 +894,12 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Maximum Texture Size|">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="65536">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="12" nodename="Multiply (Value)">
@@ -1080,8 +1024,6 @@
    </LINK>
    <LINK dstnodeid="41" dstpinname="Input 2" srcnodeid="76" srcpinname="Output">
    </LINK>
-   <LINK dstnodeid="38" dstpinname="Read" srcnodeid="59" srcpinname="Output">
-   </LINK>
    <NODE id="21" nodename="EQ (String)" systemname="EQ (String)">
    <BOUNDS height="0" left="225" top="10470" type="Node" width="0">
    </BOUNDS>
@@ -1155,7 +1097,7 @@
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="2">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -1166,4 +1108,58 @@
    </LINK>
    <LINK srcnodeid="75" srcpinname="Texture Out" dstnodeid="30" dstpinname="Texture">
    </LINK>
+   <NODE id="37" nodename="DynamicTexture (EX9.Texture Raw)" systemname="DynamicTexture (EX9.Texture Raw)">
+   <BOUNDS height="0" left="1215" top="14625" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Data" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Format" pintype="Input" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Width" pintype="Input" visible="1">
+   </PIN>
+   <PIN pinname="Height" pintype="Input" visible="1">
+   </PIN>
+   <PIN pinname="Depth" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Filter" slicecount="1" values="|Filter/Dither Default |">
+   </PIN>
+   <PIN pinname="Mip Map Dither" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Mip Map Filter" slicecount="1" values="None">
+   </PIN>
+   <PIN pinname="Dither" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="37" dstpinname="Width" srcnodeid="19" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="37" dstpinname="Height" srcnodeid="18" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="37" dstpinname="Format" srcnodeid="16" srcpinname="Output Enum">
+   </LINK>
+   <LINK dstnodeid="34" dstpinname="Input 2" srcnodeid="37" srcpinname="Texture Out">
+   </LINK>
+   <NODE systemname="AsRaw (EX9.Texture)" nodename="AsRaw (EX9.Texture)" componentmode="Hidden" id="82">
+   <BOUNDS type="Node" left="2310" top="13980" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="File Format" slicecount="1" values="DDS">
+   </PIN>
+   <PIN pinname="Read" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="32" srcpinname="Output" dstnodeid="82" dstpinname="Texture">
+   </LINK>
+   <LINK srcnodeid="59" srcpinname="Output" dstnodeid="82" dstpinname="Read">
+   </LINK>
+   <LINK srcnodeid="82" srcpinname="Output" dstnodeid="37" dstpinname="Data">
+   </LINK>
+   <PACK Name="imagepack" Version="0.1.0">
+   </PACK>
+   <PACK Name="addonpack" Version="31.9.0">
+   </PACK>
    </PATCH>

@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
-   <PATCH nodename="E:\Tooools\TextureConverter\TEXTURECONVERTER.v4p" bgcolor="15132390" locked="1">
-   <BOUNDS height="11010" left="5865" top="2400" type="Window" width="9900">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
+   <PATCH nodename="C:\Users\joreg\dev\repos\Tooools\TextureConverter\TEXTURECONVERTER.v4p" bgcolor="15132390" locked="1">
+   <BOUNDS height="11010" left="1005" top="2430" type="Window" width="9900">
    </BOUNDS>
    <NODE componentmode="InABox" hiddenwhenlocked="0" id="32" nodename="RENDERER (EX9)">
    <BOUNDS height="0" left="750" top="2415" type="Node" width="0">
@@ -129,7 +129,7 @@
    </BOUNDS>
    <PIN pinname="Processing..." visible="1">
    </PIN>
-   <BOUNDS height="17100" left="3465" top="0" type="Window" width="15345">
+   <BOUNDS height="17100" left="11595" top="450" type="Window" width="15345">
    </BOUNDS>
    <PIN pinname="Src" visible="1">
    </PIN>
@@ -183,7 +183,7 @@
    </BOUNDS>
    <BOUNDS height="285" left="2040" top="165" type="Box" width="2505">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" encoded="0" values="..\..\ars\gala2012\assets\caribbeanstorms_iss_20120629HighRes">
+   <PIN pinname="Input String" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -243,7 +243,7 @@
    </BOUNDS>
    <PIN pinname="Output String" visible="1">
    </PIN>
-   <PIN pinname="Input String" slicecount="1" encoded="0" values="*.jpg">
+   <PIN pinname="Input String" slicecount="1" encoded="0" values="*.png">
    </PIN>
    </NODE>
    <LINK dstnodeid="25" dstpinname="Source File Mask" hiddenwhenlocked="1" srcnodeid="21" srcpinname="Output String">
@@ -431,9 +431,9 @@
    <LINK dstnodeid="25" dstpinname="Target Directory Suffix" hiddenwhenlocked="1" srcnodeid="13" srcpinname="Output String">
    </LINK>
    <NODE componentmode="InABox" id="8" nodename="IOBox (String)">
-   <BOUNDS height="270" left="750" top="8685" type="Node" width="2565">
+   <BOUNDS height="270" left="750" top="9075" type="Node" width="2565">
    </BOUNDS>
-   <BOUNDS height="330" left="750" top="8685" type="Box" width="2565">
+   <BOUNDS height="330" left="750" top="9075" type="Box" width="2565">
    </BOUNDS>
    <BOUNDS height="160" left="0" top="0" type="Window" width="215">
    </BOUNDS>
@@ -443,11 +443,13 @@
    </PIN>
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
+   <PIN pinname="String Type" slicecount="1" values="URL">
+   </PIN>
    </NODE>
    <NODE componentmode="InABox" id="7" nodename="IOBox (String)">
-   <BOUNDS height="270" left="750" top="9075" type="Node" width="4755">
+   <BOUNDS height="270" left="750" top="8775" type="Node" width="4755">
    </BOUNDS>
-   <BOUNDS height="330" left="750" top="9075" type="Box" width="4755">
+   <BOUNDS height="300" left="750" top="8775" type="Box" width="4755">
    </BOUNDS>
    <BOUNDS height="160" left="0" top="0" type="Window" width="215">
    </BOUNDS>
@@ -513,6 +515,10 @@
    </PIN>
    <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="65536">
+   </PIN>
    </NODE>
    <LINK dstnodeid="25" dstpinname="Maximum Texture Size" hiddenwhenlocked="1" srcnodeid="3" srcpinname="Y Output Value">
    </LINK>
@@ -562,4 +568,8 @@
    </LINK>
    <LINK dstnodeid="25" dstpinname="Target Height [%]" hiddenwhenlocked="1" srcnodeid="1" srcpinname="Y Output Value">
    </LINK>
+   <PACK Name="imagepack" Version="0.1.0">
+   </PACK>
+   <PACK Name="addonpack" Version="31.9.0">
+   </PACK>
    </PATCH>
